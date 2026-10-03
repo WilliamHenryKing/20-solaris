@@ -19,3 +19,7 @@ The Daylight Pavilion has a sun-position slider and three camera views. Its curv
 The contact view creates an editable local brief and downloads plain text. It collects no personal data and sends nothing. All projects are fictional, unbuilt studies; generated images imply no completed client commissions.
 
 User authorized public GitHub and Cloudflare publication; root agent coordinates release and live verification. See HANDOFF.md for current verification boundaries and ASSETS.md for provenance.
+
+## Interactive study
+
+![Original Three.js architectural study](docs/media/interaction.webp)

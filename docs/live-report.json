@@ -1,0 +1,202 @@
+{
+  "base": "https://20-solaris.williamking.workers.dev",
+  "checkedAt": "2026-10-03T15:14:11.465Z",
+  "files": [
+    {
+      "path": "/404.html",
+      "status": 200,
+      "matched": true,
+      "bytes": 346
+    },
+    {
+      "path": "/assets/index-DUQcyfqe.css",
+      "status": 200,
+      "matched": true,
+      "bytes": 21292
+    },
+    {
+      "path": "/assets/index-DuzbIReo.js",
+      "status": 200,
+      "matched": true,
+      "bytes": 350401
+    },
+    {
+      "path": "/assets/Pavilion-DHnRhry3.js",
+      "status": 200,
+      "matched": true,
+      "bytes": 582092
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "matched": true,
+      "bytes": 289
+    },
+    {
+      "path": "/fonts/manrope-latin.woff2",
+      "status": 200,
+      "matched": true,
+      "bytes": 24836
+    },
+    {
+      "path": "/fonts/OFL-Manrope.txt",
+      "status": 200,
+      "matched": true,
+      "bytes": 4387
+    },
+    {
+      "path": "/images/solaris-cultural-mobile.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 119318
+    },
+    {
+      "path": "/images/solaris-cultural.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 496444
+    },
+    {
+      "path": "/images/solaris-hero-mobile.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 69096
+    },
+    {
+      "path": "/images/solaris-hero.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 300114
+    },
+    {
+      "path": "/images/solaris-interior-mobile.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 67468
+    },
+    {
+      "path": "/images/solaris-interior.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 278830
+    },
+    {
+      "path": "/images/solaris-workspace-mobile.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 54412
+    },
+    {
+      "path": "/images/solaris-workspace.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 207424
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "matched": true,
+      "bytes": 616
+    },
+    {
+      "path": "/release.json",
+      "status": 200,
+      "matched": true,
+      "bytes": 133
+    }
+  ],
+  "errors": [],
+  "notFoundStatus": 404,
+  "release": {
+    "project": "20-solaris",
+    "sourceCommit": "e9a26cf325a13fb53ac3a660fe4f9e93255181b7",
+    "builtAt": "2026-10-03T15:11:58.704Z"
+  },
+  "desktop": {
+    "title": "Designed around the light — SOLARIS",
+    "overflow": false,
+    "resources": [
+      {
+        "name": "/assets/index-DuzbIReo.js",
+        "encoded": 121923,
+        "transfer": 122223
+      },
+      {
+        "name": "/assets/index-DUQcyfqe.css",
+        "encoded": 5880,
+        "transfer": 6180
+      },
+      {
+        "name": "/fonts/manrope-latin.woff2",
+        "encoded": 24836,
+        "transfer": 25136
+      },
+      {
+        "name": "/images/solaris-hero.webp",
+        "encoded": 300114,
+        "transfer": 300414
+      },
+      {
+        "name": "/images/solaris-hero-mobile.webp",
+        "encoded": 69096,
+        "transfer": 69396
+      },
+      {
+        "name": "/favicon.svg",
+        "encoded": 216,
+        "transfer": 516
+      }
+    ],
+    "paint": [
+      {
+        "name": "first-paint",
+        "startTime": 528
+      },
+      {
+        "name": "first-contentful-paint",
+        "startTime": 672
+      }
+    ]
+  },
+  "phone": {
+    "title": "Designed around the light — SOLARIS",
+    "overflow": false,
+    "resources": [
+      {
+        "name": "/assets/index-DuzbIReo.js",
+        "encoded": 121923,
+        "transfer": 122223
+      },
+      {
+        "name": "/assets/index-DUQcyfqe.css",
+        "encoded": 5880,
+        "transfer": 6180
+      },
+      {
+        "name": "/fonts/manrope-latin.woff2",
+        "encoded": 24836,
+        "transfer": 25136
+      },
+      {
+        "name": "/images/solaris-hero-mobile.webp",
+        "encoded": 69096,
+        "transfer": 69396
+      },
+      {
+        "name": "/favicon.svg",
+        "encoded": 216,
+        "transfer": 516
+      }
+    ],
+    "paint": [
+      {
+        "name": "first-paint",
+        "startTime": 436
+      },
+      {
+        "name": "first-contentful-paint",
+        "startTime": 564
+      }
+    ]
+  }
+}
