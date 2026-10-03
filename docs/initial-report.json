@@ -1,0 +1,135 @@
+{
+  "slug": "20-solaris",
+  "port": "4630",
+  "browser": "154.0.8037.97",
+  "errors": ["Failed to load resource: the server responded with a status of 404 (Not Found)"],
+  "views": [
+    {
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "h1": ["Designed around the light."]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "h1": ["Designed around the light."]
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "h1": ["Designed around the light."]
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "overflow": false,
+      "h1": ["Designed around the light."]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "overflow": false,
+      "h1": ["Designed around the light."]
+    }
+  ],
+  "axe": [],
+  "links": [
+    {
+      "text": "SOLARIS",
+      "href": "#/"
+    },
+    {
+      "text": "Projects",
+      "href": "#/projects"
+    },
+    {
+      "text": "Studio",
+      "href": "#/studio"
+    },
+    {
+      "text": "Let’s talk ↗",
+      "href": "#/contact"
+    },
+    {
+      "text": "Explore our spaces ↘",
+      "href": "#/projects"
+    },
+    {
+      "text": "Meet the studio ↗",
+      "href": "#/studio"
+    },
+    {
+      "text": "View all projects ↗",
+      "href": "#/projects"
+    },
+    {
+      "text": "↗01Sun CourtResidentialCape Town / 2026",
+      "href": "#/projects/sun-court"
+    },
+    {
+      "text": "↗02Light HouseResidentialLisbon / 2025",
+      "href": "#/projects/light-house"
+    },
+    {
+      "text": "Let’s make space ↗",
+      "href": "#/contact"
+    },
+    {
+      "text": "Good spaces startwith a conversation. ↗",
+      "href": "#/contact"
+    },
+    {
+      "text": "Made around the light ↗",
+      "href": "#/studio"
+    }
+  ],
+  "controls": [
+    {
+      "tag": "BUTTON",
+      "text": "Menu +",
+      "label": null,
+      "type": "button"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Perspective",
+      "label": null,
+      "type": "button"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Courtyard",
+      "label": null,
+      "type": "button"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Above",
+      "label": null,
+      "type": "button"
+    },
+    {
+      "tag": "INPUT",
+      "text": "",
+      "label": null,
+      "type": "range"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pause motion",
+      "label": null,
+      "type": "button"
+    }
+  ],
+  "diagnostics": {
+    "ready": true,
+    "renders": 3,
+    "paused": true,
+    "sun": 42,
+    "view": 0,
+    "disposed": false
+  }
+}

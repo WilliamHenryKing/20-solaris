@@ -1,0 +1,497 @@
+{
+  "slug": "20-solaris",
+  "base": "http://127.0.0.1:4630",
+  "date": "2026-10-03T14:51:03.827Z",
+  "checks": [
+    {
+      "name": "1440 #/ no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/ images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/ single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/ axe A/AA",
+      "pass": true
+    },
+    {
+      "name": "1440 #/projects no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/projects images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/projects single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/projects axe A/AA",
+      "pass": true
+    },
+    {
+      "name": "1440 #/studio no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/studio images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/studio single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/contact no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/contact images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/contact single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/contact axe A/AA",
+      "pass": true
+    },
+    {
+      "name": "1440 #/projects/sun-court no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/projects/sun-court images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/projects/sun-court single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/projects/light-house no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/projects/light-house images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/projects/light-house single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/projects/common-hours no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/projects/common-hours images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/projects/common-hours single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/projects/north-window no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/projects/north-window images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/projects/north-window single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/ no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/ images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/ single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/ axe A/AA",
+      "pass": true
+    },
+    {
+      "name": "390 #/projects no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/projects images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/projects single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/projects axe A/AA",
+      "pass": true
+    },
+    {
+      "name": "390 #/studio no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/studio images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/studio single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/contact no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/contact images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/contact single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/contact axe A/AA",
+      "pass": true
+    },
+    {
+      "name": "390 #/projects/sun-court no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/projects/sun-court images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/projects/sun-court single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/projects/light-house no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/projects/light-house images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/projects/light-house single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/projects/common-hours no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/projects/common-hours images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/projects/common-hours single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/projects/north-window no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/projects/north-window images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/projects/north-window single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "Gallery filter selects",
+      "pass": true
+    },
+    {
+      "name": "Filtered gallery retains a project",
+      "pass": true
+    },
+    {
+      "name": "Brief downloads text file",
+      "pass": true
+    },
+    {
+      "name": "Brief includes selected choices",
+      "pass": true
+    },
+    {
+      "name": "Brief confirms local demo",
+      "pass": true
+    },
+    {
+      "name": "Phone menu opens",
+      "pass": true
+    },
+    {
+      "name": "mobile menu axe A/AA",
+      "pass": true
+    },
+    {
+      "name": "Escape closes phone menu",
+      "pass": true
+    },
+    {
+      "name": "Phone menu navigation changes route",
+      "pass": true
+    },
+    {
+      "name": "Phone menu closes after navigation",
+      "pass": true
+    },
+    {
+      "name": "Reduced-motion home remains readable",
+      "pass": true
+    },
+    {
+      "name": "Sun changes to evening",
+      "pass": true
+    },
+    {
+      "name": "Courtyard camera selected",
+      "pass": true
+    },
+    {
+      "name": "Above camera selected",
+      "pass": true
+    },
+    {
+      "name": "Unknown hash route is handled",
+      "pass": true
+    },
+    {
+      "name": "No browser/network errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "routes": [
+    {
+      "width": 1440,
+      "route": "#/",
+      "title": "Designed around the light — SOLARIS",
+      "headings": ["Designed around the light."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/projects",
+      "title": "Selected spaces — SOLARIS",
+      "headings": ["Openpossibilities."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/studio",
+      "title": "The studio — SOLARIS",
+      "headings": ["Look towardsthe light."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/contact",
+      "title": "Start a conversation — SOLARIS",
+      "headings": ["Your nextchapter."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/projects/sun-court",
+      "title": "Sun Court — SOLARIS",
+      "headings": ["Sun Court"],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/projects/light-house",
+      "title": "Light House — SOLARIS",
+      "headings": ["Light House"],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/projects/common-hours",
+      "title": "Common Hours — SOLARIS",
+      "headings": ["Common Hours"],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/projects/north-window",
+      "title": "North Window — SOLARIS",
+      "headings": ["North Window"],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/",
+      "title": "Designed around the light — SOLARIS",
+      "headings": ["Designed around the light."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/projects",
+      "title": "Selected spaces — SOLARIS",
+      "headings": ["Openpossibilities."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/studio",
+      "title": "The studio — SOLARIS",
+      "headings": ["Look towardsthe light."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/contact",
+      "title": "Start a conversation — SOLARIS",
+      "headings": ["Your nextchapter."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/projects/sun-court",
+      "title": "Sun Court — SOLARIS",
+      "headings": ["Sun Court"],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/projects/light-house",
+      "title": "Light House — SOLARIS",
+      "headings": ["Light House"],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/projects/common-hours",
+      "title": "Common Hours — SOLARIS",
+      "headings": ["Common Hours"],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/projects/north-window",
+      "title": "North Window — SOLARIS",
+      "headings": ["North Window"],
+      "broken": [],
+      "overflow": false
+    }
+  ],
+  "accessibility": [
+    {
+      "name": "1440 #/",
+      "violations": []
+    },
+    {
+      "name": "1440 #/projects",
+      "violations": []
+    },
+    {
+      "name": "1440 #/contact",
+      "violations": []
+    },
+    {
+      "name": "390 #/",
+      "violations": []
+    },
+    {
+      "name": "390 #/projects",
+      "violations": []
+    },
+    {
+      "name": "390 #/contact",
+      "violations": []
+    },
+    {
+      "name": "mobile menu",
+      "violations": []
+    }
+  ],
+  "diagnostics": [
+    {
+      "ready": true,
+      "renders": 122,
+      "paused": false,
+      "sun": 100,
+      "view": 2,
+      "disposed": false,
+      "drawCalls": 55,
+      "triangles": 42430,
+      "geometries": 42,
+      "textures": 7,
+      "dpr": 1,
+      "shadowMap": 2048
+    },
+    {
+      "ready": true,
+      "renders": 123,
+      "paused": true,
+      "sun": 100,
+      "view": 2,
+      "disposed": false,
+      "drawCalls": 55,
+      "triangles": 42430,
+      "geometries": 42,
+      "textures": 7,
+      "dpr": 1,
+      "shadowMap": 2048
+    }
+  ],
+  "browser": "154.0.8037.97",
+  "reducedMotionControl": "Pause motion / system reduced motion"
+}
