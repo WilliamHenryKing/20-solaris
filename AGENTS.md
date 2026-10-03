@@ -1,0 +1,5 @@
+# SOLARIS
+
+New independent architecture/interiors/finishing website commission, 3 October 2026. Read DESIGN.md. User requests React, Three.js, Vite and an impressive immersive responsive experience. Only Astra and Sol 6.1 subagents permitted. The solo restrictions for 14-17 and original thirteen's production queue do not govern this new commission. Root coordinates production and sequential heavy jobs. No external publication, messages or Upwork edits are included.
+
+Project-local exact dependencies, source and assets. Strict TypeScript, GSAP/useGSAP with scoped cleanup, Tailwind, Bun, Biome and Lightning CSS. Dev 4530, preview 4630, loopback and strict port. Native scrolling, reduced motion, visible keyboard focus, accessible menus/forms, useful WebGL fallback, dispose GPU resources and pause offscreen. Document demo status, original/generated/licensed asset provenance, browser checks and limits. Concept projects are fictional, never claim real completed client commissions.
