@@ -14,7 +14,7 @@ Independent fictional architecture studio portfolio, commissioned 3 October 2026
 
 Edit the project array and studio copy in `src/content.ts`. Routing and enquiry options live in `src/main.tsx`; styles in `src/style.css`; the original procedural pavilion in `src/Pavilion.tsx`. Hash routes provide home, project index/filter, individual studies, studio and contact. No backend required.
 
-The Daylight Pavilion has a sun-position slider and three camera views. Its curved wall, floating oculus roof, supports, bench, planter and steps are original geometry. Shadows respond to light; it is an architectural illustration, not a calibrated solar-analysis tool. Rendering pauses offscreen/hidden, GPU resources dispose on unmount, DPR caps at 1.6, and unsupported WebGL retains explanatory content. Manual motion pause and live operating-system reduced motion are supported.
+The Daylight Pavilion has a native-scroll camera journey through arrival, beneath the oculus and toward the garden, with desktop/portrait framing, chapter captions, explicit jumps, pause/resume and a keyboard skip to manual controls. Its sun-position slider and three manual camera views take ownership until explicit resume. Its curved wall, floating oculus roof, supports, bench, planter and steps are original geometry. Shadows respond to light; it is an architectural illustration, not a calibrated solar-analysis tool. Rendering pauses offscreen/hidden, GPU resources dispose on unmount, DPR caps at 1.6, and unsupported WebGL retains explanatory content. Manual motion pause and live operating-system reduced motion are supported.
 
 The contact view creates an editable local brief and downloads plain text. It collects no personal data and sends nothing. All projects are fictional, unbuilt studies; generated images imply no completed client commissions.
 
@@ -23,3 +23,18 @@ User authorized public GitHub and Cloudflare publication; root agent coordinates
 ## Interactive study
 
 ![Original Three.js architectural study](docs/media/interaction.webp)
+
+
+## Current refinement and queued checks
+
+The current Impeccable refinement and camera journey are implemented in source. Final CUDA render acceptance, browser visual/behavioral verification and refinement publication receipts remain pending; the links above document the earlier public release. The manual detector ran once and its two Arial warnings were fixed. Hooks are authorized, with no automatic execution claimed.
+
+Seven official [GSAP skill references](https://github.com/greensock/gsap-skills/tree/aed9cfd3277740755f6bfc1155c7aa645403b760) are pinned at `aed9cfd3277740755f6bfc1155c7aa645403b760`. See [the refinement record](docs/IMPECCABLE-REFINEMENT.md) for scope and pending receipts.
+
+Root runs browser checks serially from the collection root, against a separately prepared preview:
+
+```powershell
+node tools/verify-architecture-cameras.cjs 20-solaris http://127.0.0.1:4630
+```
+
+This focused harness saves desktop/phone chapter screenshots, diagnostic camera behavior and bounded animation-frame timing samples in `output/playwright`. Screenshots require manual compositional review. Timing samples establish neither a universal frame-rate guarantee nor physical-device performance. The existing broader project browser checks remain separate.

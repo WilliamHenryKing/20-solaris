@@ -6,7 +6,16 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!**/bun.lock", "!**/docs/visual/captures", "!**/public"]
+    "includes": [
+      "**",
+      "!**/bun.lock",
+      "!**/docs/visual/captures",
+      "!**/public",
+      "!**/assets/source",
+      "!**/tools/worlds/cloth",
+      "!**/docs/render",
+      "!**/docs/releases"
+    ]
   },
   "formatter": {
     "indentStyle": "space",

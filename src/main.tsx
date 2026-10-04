@@ -1,21 +1,36 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { Component, lazy, type ReactNode, Suspense, useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { projects, studio } from "./content";
+import { Arrow, SunMark } from "./Marks";
+import { MaterialStudy } from "./MaterialStudy";
 import "./style.css";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Pavilion = lazy(() => import("./Pavilion").then((module) => ({ default: module.Pavilion })));
+/** A failed late chunk (offline, or a replaced deployment) must not blank the whole page. */
+class StudyBoundary extends Component<
+  { fallback: ReactNode; children: ReactNode },
+  { failed: boolean }
+> {
+  state = { failed: false };
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+  render() {
+    return this.state.failed ? this.props.fallback : this.props.children;
+  }
+}
 function DeferredPavilion({ reduced }: { reduced: boolean }) {
-  const holder = useRef<HTMLDivElement>(null);
+  const holder = useRef<HTMLElement>(null);
   const [near, setNear] = useState(false);
   useEffect(() => {
     if (!holder.current) return;
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) {
+      (entries) => {
+        if (entries.at(-1)?.isIntersecting) {
           setNear(true);
           observer.disconnect();
         }
@@ -25,40 +40,43 @@ function DeferredPavilion({ reduced }: { reduced: boolean }) {
     observer.observe(holder.current);
     return () => observer.disconnect();
   }, []);
-  const fallback = (
-    <section className="pavilion-section">
-      <div className="section-label">03 / THE DAYLIGHT LAB</div>
+  const stage = (
+    <div className="pavilion-stage">
+      <img
+        loading="lazy"
+        src="/images/solaris-hero-mobile.webp"
+        alt="Sculptural courtyard architecture with an open skylight"
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+      />
+    </div>
+  );
+  // The heading and image gallery stay mounted while the interactive study arrives, so a
+  // chosen gallery view survives the swap.
+  return (
+    <section className="pavilion-section" aria-labelledby="pavilion-title" ref={holder}>
       <div className="pavilion-top">
-        <h2>
+        <h2 id="pavilion-title">
           Same place.
           <br />
           Different light.
         </h2>
         <p>
-          A courtyard shaped by sunlight.
+          Move the sun. Watch a room become something new.
           <br />
-          The interactive architectural study loads as you approach.
+          Explore the courtyard from three viewpoints.
         </p>
       </div>
-      <div className="pavilion-stage">
-        <img
-          src="/images/solaris-hero-mobile.webp"
-          alt="Sculptural courtyard architecture with an open skylight"
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        />
-      </div>
-    </section>
-  );
-  return (
-    <div ref={holder}>
+      <MaterialStudy />
       {near ? (
-        <Suspense fallback={fallback}>
-          <Pavilion reduced={reduced} />
-        </Suspense>
+        <StudyBoundary fallback={stage}>
+          <Suspense fallback={stage}>
+            <Pavilion reduced={reduced} />
+          </Suspense>
+        </StudyBoundary>
       ) : (
-        fallback
+        stage
       )}
-    </div>
+    </section>
   );
 }
 function App() {
@@ -68,6 +86,8 @@ function App() {
   const [manual, setManual] = useState(false);
   const [os, setOs] = useState(matchMedia("(prefers-reduced-motion: reduce)").matches);
   const root = useRef<HTMLDivElement>(null);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const firstRoute = useRef(true);
   const reduced = manual || os;
   useEffect(() => {
     const fn = () => {
@@ -77,7 +97,10 @@ function App() {
     };
     addEventListener("hashchange", fn);
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setMenu(false);
+      if (event.key === "Escape" && menuButton.current?.getAttribute("aria-expanded") === "true") {
+        setMenu(false);
+        menuButton.current.focus();
+      }
     };
     addEventListener("keydown", handleEscape);
     const media = matchMedia("(prefers-reduced-motion: reduce)");
@@ -91,36 +114,40 @@ function App() {
   }, []);
   useEffect(() => {
     document.title = `${route === "/" ? "Designed around the light" : route === "/projects" ? "Selected spaces" : route === "/studio" ? "The studio" : route === "/contact" ? "Start a conversation" : projects.find((p) => route === `/projects/${p.id}`)?.title || "Page not found"} — SOLARIS`;
+    // Leave the first load alone so Tab starts at the header and its skip link.
+    if (firstRoute.current) {
+      firstRoute.current = false;
+      return;
+    }
     root.current?.querySelector<HTMLElement>("main")?.focus({ preventScroll: true });
   }, [route]);
   useGSAP(
     () => {
       if (reduced) return;
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-      tl.from(".hero-line", { yPercent: 110, duration: 1.2, stagger: 0.14 })
-        .from(".sun-mark", { rotation: -70, scale: 0.6, duration: 1.4 }, 0.15)
-        .from(
-          ".hero-photo",
-          { clipPath: "inset(15% 10% 15% 10%)", scale: 1.04, duration: 1.5 },
-          0.2,
-        )
-        .from(".hero-meta", { y: 20, opacity: 0, duration: 0.7 }, 0.8);
+      if (route === "/") {
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        tl.from(".hero-line", { yPercent: 55, duration: 0.8, stagger: 0.09 })
+          .from(".sun-mark", { rotation: -35, scale: 0.88, duration: 1.2 }, 0.15)
+          .from(".hero-photo", { clipPath: "inset(0 18% 0 0)", duration: 1.2 }, 0.2)
+          .from(".hero-meta", { opacity: 0.4, duration: 0.5 }, 0.8);
+      }
       gsap.utils.toArray<HTMLElement>(".reveal").forEach(
         (el) =>
           void gsap.from(el, {
-            y: 50,
-            opacity: 0,
-            duration: 0.9,
+            opacity: 0.65,
+            duration: 0.45,
             scrollTrigger: { trigger: el, start: "top 88%", once: true },
           }),
       );
       gsap.utils.toArray<HTMLElement>(".project-photo").forEach(
         (el) =>
+          // The photograph is 110% tall from the top edge: drifting within -8..0% keeps the
+          // frame covered instead of exposing the card behind it.
           void gsap.fromTo(
             el,
-            { yPercent: -4 },
+            { yPercent: -8 },
             {
-              yPercent: 4,
+              yPercent: 0,
               ease: "none",
               scrollTrigger: {
                 trigger: el.parentElement,
@@ -151,8 +178,9 @@ function App() {
                 alt={`${p.title}: conceptual architecture with sculptural forms and natural light`}
                 loading="lazy"
               />
-              <span className="card-arrow">↗</span>
-              <span className="image-index">0{i + 1}</span>
+              <span className="card-arrow">
+                <Arrow />
+              </span>
             </div>
             <div className="project-caption">
               <h3>{p.title}</h3>
@@ -168,18 +196,29 @@ function App() {
   );
   return (
     <div ref={root}>
+      <button
+        className="skip-link"
+        type="button"
+        onClick={() => {
+          document.getElementById("main-content")?.focus();
+        }}
+      >
+        Skip to content
+      </button>
       <header>
         <a className="wordmark" href="#/" aria-label="SOLARIS home">
           SOLARIS
         </a>
         <button
           className="menu-button"
+          ref={menuButton}
           type="button"
           aria-expanded={menu}
           aria-controls="navigation"
           onClick={() => setMenu(!menu)}
         >
-          {menu ? "Close −" : "Menu +"}
+          {menu ? "Close" : "Menu"}
+          <span className={menu ? "menu-stroke is-open" : "menu-stroke"} aria-hidden="true" />
         </button>
         <nav id="navigation" className={menu ? "is-open" : ""} aria-label="Main navigation">
           {[
@@ -187,14 +226,22 @@ function App() {
             ["Studio", "/studio"],
             ["Let’s talk", "/contact"],
           ].map(([text, path]) => (
-            <a key={path} href={`#${path}`} aria-current={route === path ? "page" : undefined}>
+            <a
+              key={path}
+              href={`#${path}`}
+              aria-current={route === path ? "page" : undefined}
+              onClick={() => {
+                setMenu(false);
+                if (route === path) document.getElementById("main-content")?.focus();
+              }}
+            >
               {text}
-              {path === "/contact" ? " ↗" : ""}
+              {path === "/contact" && <Arrow />}
             </a>
           ))}
         </nav>
       </header>
-      <main tabIndex={-1}>
+      <main id="main-content" tabIndex={-1}>
         {route === "/" ? (
           <>
             <section className="hero">
@@ -213,19 +260,17 @@ function App() {
                   </span>
                 </h1>
                 <div className="sun-mark" aria-hidden="true">
-                  ✳
+                  <SunMark />
                 </div>
                 <div className="hero-meta">
                   <p>
                     Architecture for
                     <br />a brighter everyday.
                   </p>
-                  <span>
-                    INDEPENDENT CONCEPT STUDIO
-                    <br />
-                    EST. 2026 / SOUTH AFRICA
-                  </span>
-                  <a href="#/projects">Explore our spaces ↘</a>
+                  <span>Independent concept studio</span>
+                  <a href="#/projects">
+                    Explore our spaces <Arrow down />
+                  </a>
                 </div>
               </div>
               <div className="hero-photo">
@@ -237,31 +282,21 @@ function App() {
                     fetchPriority="high"
                   />
                 </picture>
-                <div className="photo-label">
-                  SUN COURT / RESIDENTIAL STUDY
-                  <br />
-                  01 — FINDING THE OPEN SKY
-                </div>
-                <div className="photo-coordinate">
-                  33°55′ S<br />
-                  18°25′ E
-                </div>
+                <div className="photo-label">Sun Court — residential concept</div>
               </div>
             </section>
             <section className="intro reveal">
-              <div className="section-label">01 / OUR PERSPECTIVE</div>
               <h2>{studio.statement}</h2>
               <div className="intro-copy">
                 <p>{studio.description}</p>
                 <a className="text-link" href="#/studio">
-                  Meet the studio ↗
+                  Meet the studio <Arrow />
                 </a>
               </div>
             </section>
             <section className="work">
               <div className="work-heading reveal">
                 <div>
-                  <div className="section-label">02 / SELECTED SPACES</div>
                   <h2>
                     Room for
                     <br />
@@ -269,25 +304,25 @@ function App() {
                   </h2>
                 </div>
                 <a className="text-link" href="#/projects">
-                  View all projects ↗
+                  View all projects <Arrow />
                 </a>
               </div>
               {cards(false)}
             </section>
             <DeferredPavilion reduced={reduced} />
             <section className="closing reveal">
-              <span>A LITTLE LIGHT GOES A LONG WAY.</span>
               <h2>
                 What could
                 <br />
                 we open up?
               </h2>
-              <a href="#/contact">Let’s make space ↗</a>
+              <a href="#/contact">
+                Let’s make space <Arrow />
+              </a>
             </section>
           </>
         ) : route === "/projects" ? (
           <section className="page-section">
-            <div className="section-label">THE PROJECT INDEX / CONCEPT STUDIES</div>
             <h1 className="page-title">
               Open
               <br />
@@ -311,7 +346,7 @@ function App() {
         ) : selected ? (
           <article className="detail">
             <a className="text-link" href="#/projects">
-              ← Back to projects
+              <Arrow back /> Back to projects
             </a>
             <div className="detail-heading">
               <h1>{selected.title}</h1>
@@ -353,12 +388,11 @@ function App() {
               className="next-project"
               href={`#/projects/${projects[(projects.indexOf(selected) + 1) % projects.length]?.id}`}
             >
-              Next possibility <span>↗</span>
+              Next possibility <Arrow />
             </a>
           </article>
         ) : route === "/studio" ? (
           <section className="page-section studio">
-            <div className="section-label">THE STUDIO / A SHARED OUTLOOK</div>
             <h1 className="page-title">
               Look towards
               <br />
@@ -366,7 +400,7 @@ function App() {
             </h1>
             <div className="studio-statement">
               <span className="studio-sun" aria-hidden="true">
-                ✳
+                <SunMark />
               </span>
               <div>
                 <h2>{studio.statement}</h2>
@@ -392,14 +426,13 @@ function App() {
                 ],
               ].map(([n, t, d]) => (
                 <div className="reveal" key={n}>
-                  <span>{n}</span>
                   <h3>{t}</h3>
                   <p>{d}</p>
                 </div>
               ))}
             </div>
             <a className="next-project" href="#/contact">
-              Begin with a conversation ↗
+              Begin with a conversation <Arrow />
             </a>
           </section>
         ) : route === "/contact" ? (
@@ -408,7 +441,9 @@ function App() {
           <section className="page-section">
             <h1 className="page-title">An unopened door.</h1>
             <p>This page does not exist.</p>
-            <a href="#/">Return to the light ↗</a>
+            <a href="#/">
+              Return to the light <Arrow />
+            </a>
           </section>
         )}
       </main>
@@ -417,10 +452,11 @@ function App() {
           <a href="#/contact">
             Good spaces start
             <br />
-            with a conversation. ↗
+            with a conversation. <Arrow />
           </a>
+          {/* A constant name with aria-pressed; pressed means motion is paused. */}
           <button type="button" aria-pressed={manual} onClick={() => setManual(!manual)}>
-            {manual ? "Motion paused" : "Pause motion"}
+            Pause motion
             {os ? " / system reduced motion" : ""}
           </button>
         </div>
@@ -433,7 +469,9 @@ function App() {
             All projects are fictional design studies. Images illustrate a concept and are not
             completed client commissions.
           </p>
-          <a href="#/studio">Made around the light ↗</a>
+          <a href="#/studio">
+            Made around the light <Arrow />
+          </a>
         </div>
       </footer>
     </div>
@@ -456,7 +494,6 @@ function Contact() {
   };
   return (
     <section className="page-section contact">
-      <div className="section-label">LET’S TALK / START WITH POSSIBILITY</div>
       <h1 className="page-title">
         Your next
         <br />
@@ -481,7 +518,7 @@ function Contact() {
           }}
         >
           <label>
-            01 / What kind of space?
+            What kind of space?
             <select
               value={type}
               onChange={(e) => {
@@ -495,7 +532,7 @@ function Contact() {
             </select>
           </label>
           <label>
-            02 / Where are you in the process?
+            Where are you in the process?
             <select
               value={timing}
               onChange={(e) => {
@@ -509,7 +546,7 @@ function Contact() {
             </select>
           </label>
           <label>
-            03 / What matters most?
+            What matters most?
             <select
               value={priority}
               onChange={(e) => {
@@ -536,7 +573,7 @@ function Contact() {
             </p>
           </div>
           <button className="download" type="submit">
-            Download your brief ↗
+            Download your brief <Arrow />
           </button>
           <p role="status">
             {ready

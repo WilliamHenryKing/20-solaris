@@ -1,7 +1,36 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import * as T from "three";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin);
+
+// Reverting a context renders its recorded timeline at the start before cleanups run.
+// That render is bookkeeping, not a camera move, so the journey ignores it.
+const reverting = () =>
+  Boolean((gsap.core as unknown as { reverting?: () => unknown }).reverting?.());
+
+const chapters = [
+  { label: "Arrival", progress: 0, caption: "Arrival — the curved wall gathers the sun." },
+  {
+    label: "Under the oculus",
+    progress: 0.5,
+    caption: "Under the oculus — daylight becomes a room.",
+  },
+  { label: "Toward the garden", progress: 1, caption: "Toward the garden — the threshold opens." },
+];
+const viewpoints = [
+  { label: "Perspective", caption: "Perspective — the whole courtyard at once." },
+  { label: "Courtyard", caption: "Courtyard — standing inside the curve." },
+  { label: "Above", caption: "Above — the plan, drawn in sunlight." },
+];
+const chapterFor = (value: number) => (value < 0.32 ? 0 : value < 0.72 ? 1 : 2);
+/** scroll: native scroll drives the camera. paused: held by the visitor. manual: the sun or the
+ * controls took over. view: a named viewpoint replaced the journey composition. */
+type Owner = "scroll" | "paused" | "manual" | "view";
 declare global {
   interface Window {
     __SOLARIS_DIAGNOSTICS__?: {
@@ -17,12 +46,42 @@ declare global {
       textures: number;
       dpr: number;
       shadowMap: number;
+      journeyProgress: number;
+      journeyOwner: string;
+      chapter: number;
+      cameraPosition: number[];
+      lookTarget: number[];
+      journeyTriggerCount: number;
     };
   }
 }
 export function Pavilion({ reduced }: { reduced: boolean }) {
+  const journeyRoot = useRef<HTMLDivElement>(null);
+  const manualControls = useRef<HTMLElement>(null);
+  const progress = useRef(0);
+  const [owner, setOwnerState] = useState<Owner>("scroll");
+  const ownerRef = useRef<Owner>("scroll");
+  const setOwner = (next: Owner) => {
+    ownerRef.current = next;
+    setOwnerState(next);
+  };
+  const timeline = useRef<gsap.core.Timeline | null>(null);
+  const scrollTween = useRef<gsap.core.Tween | null>(null);
+  const [announcement, setAnnouncement] = useState("");
+  const [chapter, setChapter] = useState(0);
+  const chapterRef = useRef(0);
+  const changeChapter = (next: number) => {
+    if (chapterRef.current === next) return;
+    chapterRef.current = next;
+    setChapter(next);
+  };
   const host = useRef<HTMLDivElement>(null);
-  const controller = useRef<{ sun: (n: number) => void; view: (n: number) => void } | null>(null);
+  const controller = useRef<{
+    sun: (n: number) => void;
+    view: (n: number) => void;
+    journey: (n: number, force?: boolean) => void;
+    freeze: () => void;
+  } | null>(null);
   const [sun, setSun] = useState(42);
   const [view, setView] = useState(0);
   const [failed, setFailed] = useState(false);
@@ -39,6 +98,22 @@ export function Pavilion({ reduced }: { reduced: boolean }) {
     }
     renderer.setPixelRatio(Math.min(devicePixelRatio, 1.6));
     renderer.shadowMap.enabled = true;
+    // A lost context shows the drawn fallback. Three restores its own GL state; only the
+    // reflection map (render-target contents are lost) needs rebuilding.
+    const onLost = (event: Event) => {
+      event.preventDefault();
+      envTarget.dispose();
+      setFailed(true);
+    };
+    const onRestored = () => {
+      envTarget = buildEnvironment();
+      scene.environment = envTarget.texture;
+      setFailed(false);
+      dirty = true;
+      wake();
+    };
+    renderer.domElement.addEventListener("webglcontextlost", onLost);
+    renderer.domElement.addEventListener("webglcontextrestored", onRestored);
     renderer.shadowMap.type = T.PCFShadowMap;
     renderer.toneMapping = T.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 0.82;
@@ -47,12 +122,17 @@ export function Pavilion({ reduced }: { reduced: boolean }) {
     scene.background = new T.Color("#9a9e8d");
     const camera = new T.PerspectiveCamera(35, 1, 0.1, 2000);
     const target = new T.Vector3(0, 1, 0);
-    const pmrem = new T.PMREMGenerator(renderer);
-    const env = new RoomEnvironment();
-    const envTarget = pmrem.fromScene(env, 0.04);
+    const buildEnvironment = () => {
+      const room = new RoomEnvironment();
+      const generator = new T.PMREMGenerator(renderer);
+      const result = generator.fromScene(room, 0.04);
+      room.dispose();
+      generator.dispose();
+      return result;
+    };
+    let envTarget = buildEnvironment();
     scene.environment = envTarget.texture;
     scene.environmentIntensity = 0.22;
-    env.dispose();
     const surface = (timber: boolean) => {
       const canvas = document.createElement("canvas");
       canvas.width = 512;
@@ -406,12 +486,27 @@ export function Pavilion({ reduced }: { reduced: boolean }) {
       textures: 0,
       dpr: renderer.getPixelRatio(),
       shadowMap: 2048,
+      journeyProgress: 0,
+      journeyOwner: "scroll",
+      chapter: 0,
+      cameraPosition: [0, 0, 0],
+      lookTarget: [0, 0, 0],
+      journeyTriggerCount: 0,
     };
     window.__SOLARIS_DIAGNOSTICS__ = diag;
     let visible = true,
       frame = 0,
       dirty = true;
     const desired = new T.Vector3(8.5, 5.3, 11.5);
+    const makeRoute = (portrait: boolean) =>
+      new T.CatmullRomCurve3([
+        new T.Vector3(portrait ? 7 : 8.5, 5.3, portrait ? 13.5 : 11.5),
+        new T.Vector3(3.2, 2.5, 5.4),
+        new T.Vector3(0.4, 1.8, 2.2),
+        new T.Vector3(-1.8, 1.7, 0.6),
+      ]);
+    const desktopRoute = makeRoute(false);
+    const portraitRoute = makeRoute(true);
     camera.position.copy(desired);
     controller.current = {
       sun(n) {
@@ -420,7 +515,20 @@ export function Pavilion({ reduced }: { reduced: boolean }) {
         light.position.set(Math.cos(a) * 11, 2.5 + Math.sin(a) * 7, Math.sin(a) * 5 - 7);
         dirty = true;
       },
+      freeze() {
+        desired.copy(camera.position);
+        dirty = true;
+      },
+      journey(n, force = false) {
+        if (!force && (ownerRef.current !== "scroll" || reduced)) return;
+        const route = camera.aspect < 1 ? portraitRoute : desktopRoute;
+        route.getPoint(Math.max(0, Math.min(1, n)), desired);
+        target.set(-n * 0.8, 1.1 + Math.sin(n * Math.PI) * 0.7, -n * 2.3);
+        camera.position.copy(desired);
+        dirty = true;
+      },
       view(n) {
+        target.set(0, 1, 0);
         diag.view = n;
         const positions = [
           [8.5, 5.3, 11.5],
@@ -434,18 +542,22 @@ export function Pavilion({ reduced }: { reduced: boolean }) {
     };
     controller.current.sun(settings.current.sun);
     controller.current.view(settings.current.view);
+    controller.current.journey(progress.current);
     const resize = () => {
       const w = el.clientWidth,
         h = el.clientHeight;
+      renderer.setPixelRatio(Math.min(devicePixelRatio, 1.6));
       renderer.setSize(w, h);
       camera.aspect = w / h;
       camera.fov = camera.aspect < 1 ? 52 : 35;
       camera.updateProjectionMatrix();
+      if (ownerRef.current === "scroll" && !reduced) controller.current?.journey(progress.current);
       dirty = true;
     };
     const ro = new ResizeObserver(resize);
     ro.observe(el);
     resize();
+    controller.current.journey(progress.current);
     const tick = () => {
       frame = 0;
       diag.paused = !visible || document.hidden;
@@ -457,6 +569,23 @@ export function Pavilion({ reduced }: { reduced: boolean }) {
       camera.lookAt(target);
       if (dirty) {
         renderer.render(scene, camera);
+        diag.journeyProgress = progress.current;
+        // A visitor's choice outranks the motion setting; named viewpoints report as manual.
+        const held = ownerRef.current;
+        diag.journeyOwner =
+          held === "view"
+            ? "manual"
+            : held !== "scroll"
+              ? held
+              : reduced
+                ? "reduced-motion"
+                : "scroll";
+        diag.chapter = chapterRef.current;
+        camera.position.toArray(diag.cameraPosition);
+        target.toArray(diag.lookTarget);
+        diag.journeyTriggerCount = ScrollTrigger.getAll().filter(
+          (trigger) => trigger.trigger === journeyRoot.current,
+        ).length;
         diag.drawCalls = renderer.info.render.calls;
         diag.triangles = renderer.info.render.triangles;
         diag.geometries = renderer.info.memory.geometries;
@@ -469,8 +598,9 @@ export function Pavilion({ reduced }: { reduced: boolean }) {
     const wake = () => {
       if (!frame) frame = requestAnimationFrame(tick);
     };
-    const io = new IntersectionObserver(([entry]) => {
-      visible = entry?.isIntersecting ?? false;
+    // The newest record wins when the browser batches an enter and a leave together.
+    const io = new IntersectionObserver((entries) => {
+      visible = entries.at(-1)?.isIntersecting ?? false;
       wake();
     });
     io.observe(el);
@@ -482,6 +612,8 @@ export function Pavilion({ reduced }: { reduced: boolean }) {
       ro.disconnect();
       io.disconnect();
       document.removeEventListener("visibilitychange", wake);
+      renderer.domElement.removeEventListener("webglcontextlost", onLost);
+      renderer.domElement.removeEventListener("webglcontextrestored", onRestored);
       controller.current = null;
       scene.traverse((o) => {
         if (o instanceof T.Mesh) {
@@ -494,93 +626,219 @@ export function Pavilion({ reduced }: { reduced: boolean }) {
       concreteTexture.dispose();
       woodTexture.dispose();
       light.shadow.dispose();
-      pmrem.dispose();
       renderer.dispose();
+      // Release the GL context now rather than at garbage collection (browsers cap live contexts).
+      renderer.forceContextLoss();
       renderer.domElement.remove();
     };
   }, [reduced]);
+
+  // Changing the motion preference starts a fresh, scroll-owned journey.
+  const lastReduced = useRef(reduced);
+  useEffect(() => {
+    if (lastReduced.current === reduced) return;
+    lastReduced.current = reduced;
+    ownerRef.current = "scroll";
+    setOwnerState("scroll");
+  }, [reduced]);
+  // Chapter jumps live outside the useGSAP context so a revert cannot rewind the page.
+  useEffect(() => () => void scrollTween.current?.kill(), []);
+  useGSAP(
+    () => {
+      if (reduced || failed || !journeyRoot.current) return;
+      const playhead = { value: 0 };
+      timeline.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: journeyRoot.current,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+          },
+        })
+        .to(playhead, {
+          value: 1,
+          ease: "none",
+          duration: 1,
+          onUpdate: () => {
+            if (reverting()) return;
+            progress.current = playhead.value;
+            if (ownerRef.current !== "scroll" || document.hidden) return;
+            controller.current?.journey(playhead.value);
+            changeChapter(chapterFor(playhead.value));
+          },
+        });
+      // This section mounts late and changes the page height; re-measure every trigger.
+      const refresh = requestAnimationFrame(() => ScrollTrigger.refresh());
+      return () => {
+        cancelAnimationFrame(refresh);
+        scrollTween.current?.kill();
+        timeline.current = null;
+      };
+    },
+    { scope: journeyRoot, dependencies: [reduced, failed], revertOnUpdate: true },
+  );
+  const journeyLive = !reduced && !failed;
+  const resumeJourney = () => {
+    setOwner("scroll");
+    controller.current?.journey(progress.current, true);
+    changeChapter(chapterFor(progress.current));
+  };
+  const jumpToChapter = (index: number) => {
+    const destination = chapters[index];
+    if (!destination) return;
+    setAnnouncement(`${destination.label} view`);
+    scrollTween.current?.kill();
+    const trigger = timeline.current?.scrollTrigger;
+    if (journeyLive && trigger) {
+      // The journey keeps its runway: travel there and let the scroll own the camera.
+      resumeJourney();
+      scrollTween.current = gsap.to(window, {
+        duration: 0.9,
+        ease: "power2.inOut",
+        scrollTo: {
+          y: trigger.start + (trigger.end - trigger.start) * destination.progress,
+          autoKill: true,
+        },
+      });
+      return;
+    }
+    // Without a scroll journey the chapter is an explicit cut that the visitor owns.
+    progress.current = destination.progress;
+    setOwner("manual");
+    controller.current?.journey(destination.progress, true);
+    changeChapter(index);
+  };
+  const finishJourney = () => {
+    setOwner("manual");
+    controller.current?.freeze();
+    // Bring the controls up with as much of the stage as fits above them.
+    manualControls.current?.scrollIntoView({ behavior: "instant", block: "end" });
+    manualControls.current?.focus({ preventScroll: true });
+  };
+  const caption = owner === "view" ? viewpoints[view]?.caption : chapters[chapter]?.caption;
+  const holdOrResume = () => {
+    if (ownerRef.current === "scroll") {
+      setOwner("paused");
+      controller.current?.freeze();
+    } else resumeJourney();
+  };
   return (
-    <section className="pavilion-section" aria-labelledby="pavilion-title">
-      <div className="section-label">03 / THE DAYLIGHT LAB</div>
-      <div className="pavilion-top">
-        <h2 id="pavilion-title">
-          Same place.
-          <br />
-          Different light.
-        </h2>
-        <p>
-          Move the sun. Watch a room become something new.
-          <br />
-          An original architectural light study, built in 3D.
-        </p>
-      </div>
-      <div className="pavilion-stage">
-        <div
-          className="scene-host"
-          ref={host}
-          role="img"
-          aria-label="Curved concrete courtyard pavilion with an open circular skylight and changing sun shadows"
-        />
-        {failed && (
-          <div className="scene-fallback">
-            <span>◯</span>
-            <h3>Daylight Pavilion</h3>
+    <>
+      <div className={`sunlight-journey ${journeyLive ? "" : "journey-static"}`} ref={journeyRoot}>
+        <div className="journey-sticky">
+          <div className="journey-toolbar">
             <p>
-              A curved concrete shelter with an open skylight. Morning light traces the courtyard;
-              midday lights the centre; evening stretches the shadows.
+              {!journeyLive
+                ? "Choose a chapter or a viewpoint."
+                : owner === "scroll"
+                  ? "Follow the daylight through the courtyard."
+                  : "The camera is yours. Resume to follow the scroll."}
             </p>
-            <p>Interactive 3D is unavailable in this browser.</p>
+            <button type="button" onClick={finishJourney}>
+              Skip to the controls
+            </button>
+            {journeyLive && (
+              <button type="button" onClick={holdOrResume}>
+                {owner === "scroll" ? "Pause journey" : "Resume journey"}
+              </button>
+            )}
           </div>
-        )}
-        <div className="scene-caption">
-          SOLARIS STUDY 001
-          <br />
-          CONCRETE / LIGHT / OPEN SPACE
+          <div className="pavilion-stage">
+            <div
+              className="scene-host"
+              ref={host}
+              role="img"
+              aria-label="Curved concrete courtyard pavilion with an open circular skylight and changing sun shadows"
+            />
+            {failed && (
+              <div className="scene-fallback">
+                <div className="fallback-oculus" aria-hidden="true" />
+                <h3>Daylight Pavilion</h3>
+                <p>
+                  A curved concrete shelter with an open skylight. Morning light traces the
+                  courtyard; midday lights the centre; evening stretches the shadows.
+                </p>
+                <p>Interactive 3D is unavailable in this browser.</p>
+              </div>
+            )}
+            <div className="scene-caption">{caption}</div>
+          </div>
+          <div className="journey-chapters">
+            {chapters.map((item, i) => (
+              <button
+                type="button"
+                key={item.label}
+                aria-pressed={owner !== "view" && chapter === i}
+                disabled={failed}
+                onClick={() => jumpToChapter(i)}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+          <p className="sr-only" aria-live="polite">
+            {announcement}
+          </p>
         </div>
+      </div>
+      <section
+        ref={manualControls}
+        className="pavilion-manual"
+        tabIndex={-1}
+        aria-label="Manual pavilion controls"
+      >
         <fieldset className="view-controls" aria-label="Pavilion viewpoints">
-          {["Perspective", "Courtyard", "Above"].map((v, i) => (
+          {viewpoints.map((item, i) => (
             <button
               type="button"
-              key={v}
-              aria-pressed={view === i}
+              key={item.label}
+              aria-pressed={owner === "view" && view === i}
               onClick={() => {
+                setOwner("view");
                 setView(i);
                 settings.current.view = i;
                 controller.current?.view(i);
+                setAnnouncement(`${item.label} viewpoint`);
               }}
             >
-              {v}
+              {item.label}
             </button>
           ))}
         </fieldset>
-      </div>
-      <div className="sun-control">
-        <span>09:00</span>
-        <label>
-          Sun position{" "}
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value={sun}
-            onChange={(e) => {
-              const n = Number(e.target.value);
-              setSun(n);
-              settings.current.sun = n;
-              controller.current?.sun(n);
-            }}
-            aria-valuetext={`${Math.round(9 + sun * 0.09)}:00 approximate sunlight study`}
-          />
-        </label>
-        <span>18:00</span>
-        <output>
-          {sun < 33
-            ? "Morning / long shadows"
-            : sun < 67
-              ? "Midday / overhead light"
-              : "Evening / warm edges"}
-        </output>
-      </div>
-    </section>
+        <div className="sun-control">
+          <span>09:00</span>
+          <label>
+            Sun position{" "}
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value={sun}
+              onChange={(e) => {
+                const n = Number(e.target.value);
+                // Moving the sun holds the current camera until the visitor resumes.
+                if (ownerRef.current === "scroll") {
+                  setOwner("manual");
+                  controller.current?.freeze();
+                }
+                setSun(n);
+                settings.current.sun = n;
+                controller.current?.sun(n);
+              }}
+              aria-valuetext={`${Math.round(9 + sun * 0.09)}:00 approximate sunlight study`}
+            />
+          </label>
+          <span>18:00</span>
+          <output>
+            {sun < 33
+              ? "Morning / long shadows"
+              : sun < 67
+                ? "Midday / overhead light"
+                : "Evening / warm edges"}
+          </output>
+        </div>
+      </section>
+    </>
   );
 }
