@@ -131,11 +131,13 @@ function App() {
           .from(".hero-photo", { clipPath: "inset(0 18% 0 0)", duration: 1.2 }, 0.2)
           .from(".hero-meta", { opacity: 0.4, duration: 0.5 }, 0.8);
       }
+      // A rise, not a fade: content waiting below the fold stays legible and at full contrast,
+      // and a focused link is never drawn faint.
       gsap.utils.toArray<HTMLElement>(".reveal").forEach(
         (el) =>
           void gsap.from(el, {
-            opacity: 0.65,
-            duration: 0.45,
+            y: 22,
+            duration: 0.7,
             scrollTrigger: { trigger: el, start: "top 88%", once: true },
           }),
       );
