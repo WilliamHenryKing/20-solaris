@@ -45,4 +45,15 @@ These interim probes predate the final renders and build; they are not release Q
 
 ### Root verification receipts
 
-Pending: render identities and selected assets; final visual review; local browser results; release identity and live verification, if published.
+Recorded after the 5 October release in [RELEASE.md](RELEASE.md) and [refinement-release.json](refinement-release.json).
+
+## Final renders and release review — 5 October 2026
+
+The final 3200 × 2000 CUDA masters are delivered to the render gallery as responsive WebPs (`solaris-world`, `solaris-light-study`); the packed source, reconstruction tools and render evidence are described in [RENDERING.md](RENDERING.md). Native inspection of the first detail master found the seat-cushion welt cutting across the draped linen throw, so the scene was corrected and both views re-rendered before delivery. Release QA ran against the final production build in installed Chrome on the GPU, and chapter captures were reviewed at 1440 and 390px.
+
+- **Reveals held content under contrast.** The quieter reveal introduced earlier in this refinement kept content below the fold at 65% opacity, so the closing contact link measured 3.56:1 until it scrolled into view. Reveals now rise into place without fading.
+- **The last chapter faced a wall.** "Toward the garden — the threshold opens" ended beside the curved back wall, looking into it: blank concrete and paving at every viewport. The walk now ends at the back of the courtyard and the gaze follows its own path, out over the bench and olive to the steps and landscape. Arrival and Under the oculus keep their framing.
+- **The stage caption lost contrast.** Columns, the roof soffit and sky pass behind the caption as the camera turns (the Under the oculus caption already sat on the dark soffit). It now sits in a paper pill matching the journey buttons.
+- **Harness gap.** The root camera harness waited for the journey before reaching the deferred pavilion section, so the scene never mounted. It now scrolls to the section first, as it already did for AUREL.
+
+Final receipts: 70 browser, 50 refinement and 31 camera checks against the build recorded in [RELEASE.md](RELEASE.md). The third detector pass is in [IMPECCABLE-DETECTOR.md](IMPECCABLE-DETECTOR.md).

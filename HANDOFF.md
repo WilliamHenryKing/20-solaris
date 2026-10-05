@@ -1,10 +1,10 @@
-# SOLARIS refinement handover 4 October 2026
+# SOLARIS refinement release — 5 October 2026
 
-Production resumed on 4 October at William's request. The camera, accessibility and layout corrections are committed locally on `work/website` and described in [docs/IMPECCABLE-REFINEMENT.md](docs/IMPECCABLE-REFINEMENT.md); they are not yet published. Both SOLARIS final renders (their scene now has a real olive planting pit and fuller garden planting), packaging, final browser/camera QA and the public release are pending, waiting for the shared GPU. The first release below remains the historical verified delivery. See the collection's [refinement handoff](../../ARCHITECTURE-REFINEMENT-HANDOFF.md) for current state.
+**Complete, public and live:** [SOLARIS](https://20-solaris.williamking.workers.dev) · [source](https://github.com/WilliamHenryKing/20-solaris). Application `04af7db3d48fccd41d443f63d05ae0ffb1fd2361`, built 2026-10-05T11:02:04Z, passed 70 browser, 50 refinement and 31 camera checks with no axe A/AA violations and was deployed as Cloudflare version `0fa5caea-39ee-42ee-a962-cbd2262d0369`. Live verification matched all 21 public files, returned a real 404 and found no desktop or phone overflow. Identities, report hashes and image receipts are in [docs/RELEASE.md](docs/RELEASE.md) and [docs/refinement-release.json](docs/refinement-release.json); the final CUDA renders, packed source and render evidence in [docs/RENDERING.md](docs/RENDERING.md); release-review corrections in [docs/IMPECCABLE-REFINEMENT.md](docs/IMPECCABLE-REFINEMENT.md). Not claimed: physical-device testing, universal frame rates or William's visual acceptance. Later documentation commits do not change the application identity.
 
 # First release — 3 October 2026
 
-**Complete, public and live:** [SOLARIS](https://20-solaris.williamking.workers.dev) · [source](https://github.com/WilliamHenryKing/20-solaris). All 70 local browser checks and 17 live asset hashes passed; desktop and phone live checks were clean. Exact application commit, Cloudflare version, limits and maintenance commands are in [docs/RELEASE.md](docs/RELEASE.md). Documentation commits after this release do not change its application identity.
+**Complete, public and live:** [SOLARIS](https://20-solaris.williamking.workers.dev) · [source](https://github.com/WilliamHenryKing/20-solaris). All 70 local browser checks and 17 live asset hashes passed; desktop and phone live checks were clean. Exact application commit, Cloudflare version, limits and maintenance commands are in [docs/releases/first-2026-10-03/RELEASE.md](docs/releases/first-2026-10-03/RELEASE.md). Documentation commits after this release do not change its application identity.
 
 ## Earlier implementation handoff (historical)
 

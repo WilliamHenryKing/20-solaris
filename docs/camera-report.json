@@ -1,0 +1,1412 @@
+{
+  "slug": "20-solaris",
+  "base": "http://127.0.0.1:4630",
+  "date": "2026-10-05T11:03:02.017Z",
+  "checks": [
+    {
+      "name": "1440x900 chapter0 valid camera",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "renders": 3,
+        "paused": false,
+        "sun": 42,
+        "view": 0,
+        "disposed": false,
+        "drawCalls": 57,
+        "triangles": 42454,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 0,
+        "journeyOwner": "scroll",
+        "chapter": 0,
+        "cameraPosition": [
+          8.5,
+          5.3,
+          11.5
+        ],
+        "lookTarget": [
+          0,
+          1.1,
+          0
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "name": "1440x900 chapter1 valid camera",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "renders": 100,
+        "paused": false,
+        "sun": 42,
+        "view": 0,
+        "disposed": false,
+        "drawCalls": 51,
+        "triangles": 42382,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 0.500412,
+        "journeyOwner": "scroll",
+        "chapter": 1,
+        "cameraPosition": [
+          1.560017212327294,
+          2.0542726608304167,
+          3.8090930279417634
+        ],
+        "lookTarget": [
+          -0.39896719945167963,
+          1.8003029035839524,
+          -1.1508045473499053
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "name": "1440x900 chapter2 valid camera",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "renders": 199,
+        "paused": false,
+        "sun": 42,
+        "view": 0,
+        "disposed": false,
+        "drawCalls": 55,
+        "triangles": 42294,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 1,
+        "journeyOwner": "scroll",
+        "chapter": 2,
+        "cameraPosition": [
+          0.5999999999999994,
+          1.55,
+          -2.2000000000000006
+        ],
+        "lookTarget": [
+          -0.4999999999999991,
+          0.9499999999999995,
+          4.200000000000001
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "name": "1440x900 distinct chapter positions",
+      "pass": true,
+      "detail": [
+        [
+          8.5,
+          5.3,
+          11.5
+        ],
+        [
+          1.560017212327294,
+          2.0542726608304167,
+          3.8090930279417634
+        ],
+        [
+          0.5999999999999994,
+          1.55,
+          -2.2000000000000006
+        ]
+      ]
+    },
+    {
+      "name": "1440x900 native scroll changes camera",
+      "pass": true,
+      "detail": [
+        {
+          "ready": true,
+          "renders": 200,
+          "paused": false,
+          "sun": 42,
+          "view": 0,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0.050206,
+          "journeyOwner": "scroll",
+          "chapter": 0,
+          "cameraPosition": [
+            7.686449152079836,
+            4.8578284122588915,
+            10.563289572088499
+          ],
+          "lookTarget": [
+            -0.03977306417549748,
+            1.2051183509148264,
+            -0.11553140912481213
+          ],
+          "journeyTriggerCount": 1
+        },
+        {
+          "ready": true,
+          "renders": 201,
+          "paused": false,
+          "sun": 42,
+          "view": 0,
+          "disposed": false,
+          "drawCalls": 51,
+          "triangles": 42382,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0.500412,
+          "journeyOwner": "scroll",
+          "chapter": 1,
+          "cameraPosition": [
+            1.560017212327294,
+            2.0542726608304167,
+            3.8090930279417634
+          ],
+          "lookTarget": [
+            -0.39896719945167963,
+            1.8003029035839524,
+            -1.1508045473499053
+          ],
+          "journeyTriggerCount": 1
+        },
+        {
+          "ready": true,
+          "renders": 202,
+          "paused": false,
+          "sun": 42,
+          "view": 0,
+          "disposed": false,
+          "drawCalls": 55,
+          "triangles": 42294,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0.950617,
+          "journeyOwner": "scroll",
+          "chapter": 2,
+          "cameraPosition": [
+            0.5418500394910146,
+            1.582728145715927,
+            -1.5372158590013116
+          ],
+          "lookTarget": [
+            0.27232236921343644,
+            1.0150146717602788,
+            3.4160447397595455
+          ],
+          "journeyTriggerCount": 1
+        }
+      ]
+    },
+    {
+      "name": "1440x900 bounded timing sample collected",
+      "pass": true,
+      "detail": {
+        "durationMs": 5006.300000005962,
+        "samples": 650,
+        "medianMs": 7.700000000000728,
+        "p95Ms": 8.299999999999272,
+        "maxMs": 9.100000000000364,
+        "gapsAbove50ms": 0
+      }
+    },
+    {
+      "name": "1440x900 manual view takes camera ownership",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "renders": 919,
+        "paused": false,
+        "sun": 42,
+        "view": 1,
+        "disposed": false,
+        "drawCalls": 57,
+        "triangles": 42454,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 1,
+        "journeyOwner": "manual",
+        "chapter": 2,
+        "cameraPosition": [
+          -7.994352953957573,
+          4.797865941902573,
+          8.992645707479632
+        ],
+        "lookTarget": [
+          0,
+          1,
+          0
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "name": "1440x900 manual view is not overwritten by scroll",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "renders": 919,
+          "paused": false,
+          "sun": 42,
+          "view": 1,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 1,
+          "journeyOwner": "manual",
+          "chapter": 2,
+          "cameraPosition": [
+            -7.994352953957573,
+            4.797865941902573,
+            8.992645707479632
+          ],
+          "lookTarget": [
+            0,
+            1,
+            0
+          ],
+          "journeyTriggerCount": 1
+        },
+        "after": {
+          "ready": true,
+          "renders": 919,
+          "paused": false,
+          "sun": 42,
+          "view": 1,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 1,
+          "journeyOwner": "manual",
+          "chapter": 2,
+          "cameraPosition": [
+            -7.994352953957573,
+            4.797865941902573,
+            8.992645707479632
+          ],
+          "lookTarget": [
+            0,
+            1,
+            0
+          ],
+          "journeyTriggerCount": 1
+        }
+      }
+    },
+    {
+      "name": "1440x900 motion-off static camera",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "renders": 2,
+          "paused": false,
+          "sun": 42,
+          "view": 1,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 1,
+          "journeyOwner": "reduced-motion",
+          "chapter": 2,
+          "cameraPosition": [
+            -8,
+            4.8,
+            9
+          ],
+          "lookTarget": [
+            0,
+            1,
+            0
+          ],
+          "journeyTriggerCount": 0
+        },
+        "after": {
+          "ready": true,
+          "renders": 2,
+          "paused": false,
+          "sun": 42,
+          "view": 1,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 1,
+          "journeyOwner": "reduced-motion",
+          "chapter": 2,
+          "cameraPosition": [
+            -8,
+            4.8,
+            9
+          ],
+          "lookTarget": [
+            0,
+            1,
+            0
+          ],
+          "journeyTriggerCount": 0
+        }
+      }
+    },
+    {
+      "name": "1440x900 manual pose survives scrolling",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "renders": 3,
+          "paused": false,
+          "sun": 42,
+          "view": 1,
+          "disposed": false,
+          "drawCalls": 51,
+          "triangles": 42382,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0.5,
+          "journeyOwner": "manual",
+          "chapter": 1,
+          "cameraPosition": [
+            1.5638135579517247,
+            2.0550416742427804,
+            3.8127269136581323
+          ],
+          "lookTarget": [
+            -0.4,
+            1.8,
+            -1.15
+          ],
+          "journeyTriggerCount": 0
+        },
+        "after": {
+          "ready": true,
+          "renders": 3,
+          "paused": false,
+          "sun": 42,
+          "view": 1,
+          "disposed": false,
+          "drawCalls": 51,
+          "triangles": 42382,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0.5,
+          "journeyOwner": "manual",
+          "chapter": 1,
+          "cameraPosition": [
+            1.5638135579517247,
+            2.0550416742427804,
+            3.8127269136581323
+          ],
+          "lookTarget": [
+            -0.4,
+            1.8,
+            -1.15
+          ],
+          "journeyTriggerCount": 0
+        }
+      }
+    },
+    {
+      "name": "1440x900 manual ownership diagnosed",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "renders": 3,
+        "paused": false,
+        "sun": 42,
+        "view": 1,
+        "disposed": false,
+        "drawCalls": 51,
+        "triangles": 42382,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 0.5,
+        "journeyOwner": "manual",
+        "chapter": 1,
+        "cameraPosition": [
+          1.5638135579517247,
+          2.0550416742427804,
+          3.8127269136581323
+        ],
+        "lookTarget": [
+          -0.4,
+          1.8,
+          -1.15
+        ],
+        "journeyTriggerCount": 0
+      }
+    },
+    {
+      "name": "1440x900 keyboard skip focuses its destination",
+      "pass": true,
+      "detail": {
+        "tag": "SECTION",
+        "class": "pavilion-manual",
+        "text": "PerspectiveCourtyardAbove09:00Sun position 18:00Midday / overhead light"
+      }
+    },
+    {
+      "name": "1440x900 route removes canvas",
+      "pass": true
+    },
+    {
+      "name": "1440x900 scene disposal diagnosed",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "renders": 4,
+        "paused": false,
+        "sun": 42,
+        "view": 1,
+        "disposed": true,
+        "drawCalls": 51,
+        "triangles": 42382,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 0.5,
+        "journeyOwner": "manual",
+        "chapter": 1,
+        "cameraPosition": [
+          1.5638135579517247,
+          2.0550416742427804,
+          3.8127269136581323
+        ],
+        "lookTarget": [
+          -0.4,
+          1.8,
+          -1.15
+        ],
+        "journeyTriggerCount": 0
+      }
+    },
+    {
+      "name": "1440x900 system reduced motion static",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "renders": 2,
+          "paused": false,
+          "sun": 42,
+          "view": 0,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0,
+          "journeyOwner": "reduced-motion",
+          "chapter": 0,
+          "cameraPosition": [
+            8.5,
+            5.3,
+            11.5
+          ],
+          "lookTarget": [
+            0,
+            1,
+            0
+          ],
+          "journeyTriggerCount": 0
+        },
+        "after": {
+          "ready": true,
+          "renders": 2,
+          "paused": false,
+          "sun": 42,
+          "view": 0,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0,
+          "journeyOwner": "reduced-motion",
+          "chapter": 0,
+          "cameraPosition": [
+            8.5,
+            5.3,
+            11.5
+          ],
+          "lookTarget": [
+            0,
+            1,
+            0
+          ],
+          "journeyTriggerCount": 0
+        }
+      }
+    },
+    {
+      "name": "390x844 chapter0 valid camera",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "renders": 3,
+        "paused": false,
+        "sun": 42,
+        "view": 0,
+        "disposed": false,
+        "drawCalls": 57,
+        "triangles": 42454,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 0,
+        "journeyOwner": "scroll",
+        "chapter": 0,
+        "cameraPosition": [
+          7,
+          5.3,
+          13.5
+        ],
+        "lookTarget": [
+          0,
+          1.1,
+          0
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "name": "390x844 chapter1 valid camera",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "renders": 97,
+        "paused": false,
+        "sun": 42,
+        "view": 0,
+        "disposed": false,
+        "drawCalls": 51,
+        "triangles": 42382,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 0.5,
+        "journeyOwner": "scroll",
+        "chapter": 1,
+        "cameraPosition": [
+          1.6250417324436557,
+          2.0613352662564517,
+          3.755628652133657
+        ],
+        "lookTarget": [
+          -0.4,
+          1.8,
+          -1.15
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "name": "390x844 chapter2 valid camera",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "renders": 191,
+        "paused": false,
+        "sun": 42,
+        "view": 0,
+        "disposed": false,
+        "drawCalls": 55,
+        "triangles": 42294,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 1,
+        "journeyOwner": "scroll",
+        "chapter": 2,
+        "cameraPosition": [
+          0.5999999999999994,
+          1.55,
+          -2.2000000000000006
+        ],
+        "lookTarget": [
+          -0.4999999999999991,
+          0.9499999999999995,
+          4.200000000000001
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "name": "390x844 distinct chapter positions",
+      "pass": true,
+      "detail": [
+        [
+          7,
+          5.3,
+          13.5
+        ],
+        [
+          1.6250417324436557,
+          2.0613352662564517,
+          3.755628652133657
+        ],
+        [
+          0.5999999999999994,
+          1.55,
+          -2.2000000000000006
+        ]
+      ]
+    },
+    {
+      "name": "390x844 native scroll changes camera",
+      "pass": true,
+      "detail": [
+        {
+          "ready": true,
+          "renders": 192,
+          "paused": false,
+          "sun": 42,
+          "view": 0,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0.049661,
+          "journeyOwner": "scroll",
+          "chapter": 0,
+          "cameraPosition": [
+            6.437578340320389,
+            4.862950502408022,
+            12.25518764961129
+          ],
+          "lookTarget": [
+            -0.03934447730850786,
+            1.2039392888399718,
+            -0.11428492071362951
+          ],
+          "journeyTriggerCount": 1
+        },
+        {
+          "ready": true,
+          "renders": 193,
+          "paused": false,
+          "sun": 42,
+          "view": 0,
+          "disposed": false,
+          "drawCalls": 51,
+          "triangles": 42382,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0.5,
+          "journeyOwner": "scroll",
+          "chapter": 1,
+          "cameraPosition": [
+            1.6250417324436557,
+            2.0613352662564517,
+            3.755628652133657
+          ],
+          "lookTarget": [
+            -0.4,
+            1.8,
+            -1.15
+          ],
+          "journeyTriggerCount": 1
+        },
+        {
+          "ready": true,
+          "renders": 194,
+          "paused": false,
+          "sun": 42,
+          "view": 0,
+          "disposed": false,
+          "drawCalls": 52,
+          "triangles": 40034,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0.94921,
+          "journeyOwner": "scroll",
+          "chapter": 2,
+          "cameraPosition": [
+            0.539507006043851,
+            1.5835569373260363,
+            -1.5180691262316086
+          ],
+          "lookTarget": [
+            0.2969634323441437,
+            1.0167768446558592,
+            3.3929791152212467
+          ],
+          "journeyTriggerCount": 1
+        }
+      ]
+    },
+    {
+      "name": "390x844 bounded timing sample collected",
+      "pass": true,
+      "detail": {
+        "durationMs": 5001.699999982118,
+        "samples": 650,
+        "medianMs": 7.700000000000728,
+        "p95Ms": 8.200000000000728,
+        "maxMs": 9.200000000000728,
+        "gapsAbove50ms": 0
+      }
+    },
+    {
+      "name": "390x844 manual view takes camera ownership",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "renders": 912,
+        "paused": false,
+        "sun": 42,
+        "view": 1,
+        "disposed": false,
+        "drawCalls": 57,
+        "triangles": 42454,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 1,
+        "journeyOwner": "manual",
+        "chapter": 2,
+        "cameraPosition": [
+          -7.994352953957573,
+          4.797865941902573,
+          8.992645707479632
+        ],
+        "lookTarget": [
+          0,
+          1,
+          0
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "name": "390x844 manual view is not overwritten by scroll",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "renders": 912,
+          "paused": false,
+          "sun": 42,
+          "view": 1,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 1,
+          "journeyOwner": "manual",
+          "chapter": 2,
+          "cameraPosition": [
+            -7.994352953957573,
+            4.797865941902573,
+            8.992645707479632
+          ],
+          "lookTarget": [
+            0,
+            1,
+            0
+          ],
+          "journeyTriggerCount": 1
+        },
+        "after": {
+          "ready": true,
+          "renders": 912,
+          "paused": false,
+          "sun": 42,
+          "view": 1,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 1,
+          "journeyOwner": "manual",
+          "chapter": 2,
+          "cameraPosition": [
+            -7.994352953957573,
+            4.797865941902573,
+            8.992645707479632
+          ],
+          "lookTarget": [
+            0,
+            1,
+            0
+          ],
+          "journeyTriggerCount": 1
+        }
+      }
+    },
+    {
+      "name": "390x844 motion-off static camera",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "renders": 2,
+          "paused": false,
+          "sun": 42,
+          "view": 1,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 1,
+          "journeyOwner": "reduced-motion",
+          "chapter": 2,
+          "cameraPosition": [
+            -8,
+            4.8,
+            9
+          ],
+          "lookTarget": [
+            0,
+            1,
+            0
+          ],
+          "journeyTriggerCount": 0
+        },
+        "after": {
+          "ready": true,
+          "renders": 2,
+          "paused": false,
+          "sun": 42,
+          "view": 1,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 1,
+          "journeyOwner": "reduced-motion",
+          "chapter": 2,
+          "cameraPosition": [
+            -8,
+            4.8,
+            9
+          ],
+          "lookTarget": [
+            0,
+            1,
+            0
+          ],
+          "journeyTriggerCount": 0
+        }
+      }
+    },
+    {
+      "name": "390x844 manual pose survives scrolling",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "renders": 3,
+          "paused": false,
+          "sun": 42,
+          "view": 1,
+          "disposed": false,
+          "drawCalls": 51,
+          "triangles": 42382,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0.5,
+          "journeyOwner": "manual",
+          "chapter": 1,
+          "cameraPosition": [
+            1.6250417324436557,
+            2.0613352662564517,
+            3.755628652133657
+          ],
+          "lookTarget": [
+            -0.4,
+            1.8,
+            -1.15
+          ],
+          "journeyTriggerCount": 0
+        },
+        "after": {
+          "ready": true,
+          "renders": 3,
+          "paused": false,
+          "sun": 42,
+          "view": 1,
+          "disposed": false,
+          "drawCalls": 51,
+          "triangles": 42382,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0.5,
+          "journeyOwner": "manual",
+          "chapter": 1,
+          "cameraPosition": [
+            1.6250417324436557,
+            2.0613352662564517,
+            3.755628652133657
+          ],
+          "lookTarget": [
+            -0.4,
+            1.8,
+            -1.15
+          ],
+          "journeyTriggerCount": 0
+        }
+      }
+    },
+    {
+      "name": "390x844 manual ownership diagnosed",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "renders": 3,
+        "paused": false,
+        "sun": 42,
+        "view": 1,
+        "disposed": false,
+        "drawCalls": 51,
+        "triangles": 42382,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 0.5,
+        "journeyOwner": "manual",
+        "chapter": 1,
+        "cameraPosition": [
+          1.6250417324436557,
+          2.0613352662564517,
+          3.755628652133657
+        ],
+        "lookTarget": [
+          -0.4,
+          1.8,
+          -1.15
+        ],
+        "journeyTriggerCount": 0
+      }
+    },
+    {
+      "name": "390x844 keyboard skip focuses its destination",
+      "pass": true,
+      "detail": {
+        "tag": "SECTION",
+        "class": "pavilion-manual",
+        "text": "PerspectiveCourtyardAbove09:00Sun position 18:00Midday / overhead light"
+      }
+    },
+    {
+      "name": "390x844 route removes canvas",
+      "pass": true
+    },
+    {
+      "name": "390x844 scene disposal diagnosed",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "renders": 4,
+        "paused": false,
+        "sun": 42,
+        "view": 1,
+        "disposed": true,
+        "drawCalls": 51,
+        "triangles": 42382,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 0.5,
+        "journeyOwner": "manual",
+        "chapter": 1,
+        "cameraPosition": [
+          1.6250417324436557,
+          2.0613352662564517,
+          3.755628652133657
+        ],
+        "lookTarget": [
+          -0.4,
+          1.8,
+          -1.15
+        ],
+        "journeyTriggerCount": 0
+      }
+    },
+    {
+      "name": "390x844 system reduced motion static",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "renders": 2,
+          "paused": false,
+          "sun": 42,
+          "view": 0,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0,
+          "journeyOwner": "reduced-motion",
+          "chapter": 0,
+          "cameraPosition": [
+            8.5,
+            5.3,
+            11.5
+          ],
+          "lookTarget": [
+            0,
+            1,
+            0
+          ],
+          "journeyTriggerCount": 0
+        },
+        "after": {
+          "ready": true,
+          "renders": 2,
+          "paused": false,
+          "sun": 42,
+          "view": 0,
+          "disposed": false,
+          "drawCalls": 57,
+          "triangles": 42454,
+          "geometries": 30,
+          "textures": 6,
+          "dpr": 1,
+          "shadowMap": 2048,
+          "journeyProgress": 0,
+          "journeyOwner": "reduced-motion",
+          "chapter": 0,
+          "cameraPosition": [
+            8.5,
+            5.3,
+            11.5
+          ],
+          "lookTarget": [
+            0,
+            1,
+            0
+          ],
+          "journeyTriggerCount": 0
+        }
+      }
+    },
+    {
+      "name": "no browser or HTTP errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "chapter": 0,
+      "file": "camera-1440x900-chapter-0.png",
+      "diagnostics": {
+        "ready": true,
+        "renders": 3,
+        "paused": false,
+        "sun": 42,
+        "view": 0,
+        "disposed": false,
+        "drawCalls": 57,
+        "triangles": 42454,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 0,
+        "journeyOwner": "scroll",
+        "chapter": 0,
+        "cameraPosition": [
+          8.5,
+          5.3,
+          11.5
+        ],
+        "lookTarget": [
+          0,
+          1.1,
+          0
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "chapter": 1,
+      "file": "camera-1440x900-chapter-1.png",
+      "diagnostics": {
+        "ready": true,
+        "renders": 100,
+        "paused": false,
+        "sun": 42,
+        "view": 0,
+        "disposed": false,
+        "drawCalls": 51,
+        "triangles": 42382,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 0.500412,
+        "journeyOwner": "scroll",
+        "chapter": 1,
+        "cameraPosition": [
+          1.560017212327294,
+          2.0542726608304167,
+          3.8090930279417634
+        ],
+        "lookTarget": [
+          -0.39896719945167963,
+          1.8003029035839524,
+          -1.1508045473499053
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "chapter": 2,
+      "file": "camera-1440x900-chapter-2.png",
+      "diagnostics": {
+        "ready": true,
+        "renders": 199,
+        "paused": false,
+        "sun": 42,
+        "view": 0,
+        "disposed": false,
+        "drawCalls": 55,
+        "triangles": 42294,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 1,
+        "journeyOwner": "scroll",
+        "chapter": 2,
+        "cameraPosition": [
+          0.5999999999999994,
+          1.55,
+          -2.2000000000000006
+        ],
+        "lookTarget": [
+          -0.4999999999999991,
+          0.9499999999999995,
+          4.200000000000001
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "chapter": 0,
+      "file": "camera-390x844-chapter-0.png",
+      "diagnostics": {
+        "ready": true,
+        "renders": 3,
+        "paused": false,
+        "sun": 42,
+        "view": 0,
+        "disposed": false,
+        "drawCalls": 57,
+        "triangles": 42454,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 0,
+        "journeyOwner": "scroll",
+        "chapter": 0,
+        "cameraPosition": [
+          7,
+          5.3,
+          13.5
+        ],
+        "lookTarget": [
+          0,
+          1.1,
+          0
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "chapter": 1,
+      "file": "camera-390x844-chapter-1.png",
+      "diagnostics": {
+        "ready": true,
+        "renders": 97,
+        "paused": false,
+        "sun": 42,
+        "view": 0,
+        "disposed": false,
+        "drawCalls": 51,
+        "triangles": 42382,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 0.5,
+        "journeyOwner": "scroll",
+        "chapter": 1,
+        "cameraPosition": [
+          1.6250417324436557,
+          2.0613352662564517,
+          3.755628652133657
+        ],
+        "lookTarget": [
+          -0.4,
+          1.8,
+          -1.15
+        ],
+        "journeyTriggerCount": 1
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "chapter": 2,
+      "file": "camera-390x844-chapter-2.png",
+      "diagnostics": {
+        "ready": true,
+        "renders": 191,
+        "paused": false,
+        "sun": 42,
+        "view": 0,
+        "disposed": false,
+        "drawCalls": 55,
+        "triangles": 42294,
+        "geometries": 30,
+        "textures": 6,
+        "dpr": 1,
+        "shadowMap": 2048,
+        "journeyProgress": 1,
+        "journeyOwner": "scroll",
+        "chapter": 2,
+        "cameraPosition": [
+          0.5999999999999994,
+          1.55,
+          -2.2000000000000006
+        ],
+        "lookTarget": [
+          -0.4999999999999991,
+          0.9499999999999995,
+          4.200000000000001
+        ],
+        "journeyTriggerCount": 1
+      }
+    }
+  ],
+  "timing": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "durationMs": 5006.300000005962,
+      "samples": 650,
+      "medianMs": 7.700000000000728,
+      "p95Ms": 8.299999999999272,
+      "maxMs": 9.100000000000364,
+      "gapsAbove50ms": 0
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "durationMs": 5001.699999982118,
+      "samples": 650,
+      "medianMs": 7.700000000000728,
+      "p95Ms": 8.200000000000728,
+      "maxMs": 9.200000000000728,
+      "gapsAbove50ms": 0
+    }
+  ],
+  "limits": "Desktop Chrome emulation and sampled screenshots; no physical-device or universal FPS claim.",
+  "browser": "154.0.8037.97",
+  "passed": true
+}

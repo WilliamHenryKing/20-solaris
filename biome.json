@@ -14,7 +14,8 @@
       "!**/assets/source",
       "!**/tools/worlds/cloth",
       "!**/docs/render",
-      "!**/docs/releases"
+      "!**/docs/releases",
+      "!**/docs/*.json"
     ]
   },
   "formatter": {

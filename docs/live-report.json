@@ -1,6 +1,6 @@
 {
   "base": "https://20-solaris.williamking.workers.dev",
-  "checkedAt": "2026-10-03T15:14:11.465Z",
+  "checkedAt": "2026-10-05T11:04:52.935Z",
   "files": [
     {
       "path": "/404.html",
@@ -9,22 +9,22 @@
       "bytes": 346
     },
     {
-      "path": "/assets/index-DUQcyfqe.css",
+      "path": "/assets/index-CdGVik6j.js",
       "status": 200,
       "matched": true,
-      "bytes": 21292
+      "bytes": 352557
     },
     {
-      "path": "/assets/index-DuzbIReo.js",
+      "path": "/assets/index-Dhuq7JLL.css",
       "status": 200,
       "matched": true,
-      "bytes": 350401
+      "bytes": 29388
     },
     {
-      "path": "/assets/Pavilion-DHnRhry3.js",
+      "path": "/assets/Pavilion-ByN9mgGg.js",
       "status": 200,
       "matched": true,
-      "bytes": 582092
+      "bytes": 589664
     },
     {
       "path": "/favicon.svg",
@@ -81,6 +81,18 @@
       "bytes": 278830
     },
     {
+      "path": "/images/solaris-light-study-mobile.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 34148
+    },
+    {
+      "path": "/images/solaris-light-study.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 206068
+    },
+    {
       "path": "/images/solaris-workspace-mobile.webp",
       "status": 200,
       "matched": true,
@@ -91,6 +103,18 @@
       "status": 200,
       "matched": true,
       "bytes": 207424
+    },
+    {
+      "path": "/images/solaris-world-mobile.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 50098
+    },
+    {
+      "path": "/images/solaris-world.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 458248
     },
     {
       "path": "/index.html",
@@ -109,22 +133,22 @@
   "notFoundStatus": 404,
   "release": {
     "project": "20-solaris",
-    "sourceCommit": "e9a26cf325a13fb53ac3a660fe4f9e93255181b7",
-    "builtAt": "2026-10-03T15:11:58.704Z"
+    "sourceCommit": "04af7db3d48fccd41d443f63d05ae0ffb1fd2361",
+    "builtAt": "2026-10-05T11:02:04.975Z"
   },
   "desktop": {
     "title": "Designed around the light — SOLARIS",
     "overflow": false,
     "resources": [
       {
-        "name": "/assets/index-DuzbIReo.js",
-        "encoded": 121923,
-        "transfer": 122223
+        "name": "/assets/index-CdGVik6j.js",
+        "encoded": 122563,
+        "transfer": 122863
       },
       {
-        "name": "/assets/index-DUQcyfqe.css",
-        "encoded": 5880,
-        "transfer": 6180
+        "name": "/assets/index-Dhuq7JLL.css",
+        "encoded": 7849,
+        "transfer": 8149
       },
       {
         "name": "/fonts/manrope-latin.woff2",
@@ -142,6 +166,11 @@
         "transfer": 69396
       },
       {
+        "name": "/images/solaris-interior-mobile.webp",
+        "encoded": 67468,
+        "transfer": 67768
+      },
+      {
         "name": "/favicon.svg",
         "encoded": 216,
         "transfer": 516
@@ -150,11 +179,11 @@
     "paint": [
       {
         "name": "first-paint",
-        "startTime": 528
+        "startTime": 284
       },
       {
         "name": "first-contentful-paint",
-        "startTime": 672
+        "startTime": 488
       }
     ]
   },
@@ -163,14 +192,14 @@
     "overflow": false,
     "resources": [
       {
-        "name": "/assets/index-DuzbIReo.js",
-        "encoded": 121923,
-        "transfer": 122223
+        "name": "/assets/index-CdGVik6j.js",
+        "encoded": 122563,
+        "transfer": 122863
       },
       {
-        "name": "/assets/index-DUQcyfqe.css",
-        "encoded": 5880,
-        "transfer": 6180
+        "name": "/assets/index-Dhuq7JLL.css",
+        "encoded": 7849,
+        "transfer": 8149
       },
       {
         "name": "/fonts/manrope-latin.woff2",
@@ -191,11 +220,11 @@
     "paint": [
       {
         "name": "first-paint",
-        "startTime": 436
+        "startTime": 432
       },
       {
         "name": "first-contentful-paint",
-        "startTime": 564
+        "startTime": 576
       }
     ]
   }

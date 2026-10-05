@@ -9,3 +9,7 @@ Two warnings identified `font-family: Arial` on `.sun-mark` and `.studio-sun`. T
 The journey ownership, layout and type-floor corrections justified one more manual scan. Impeccable `context` reported `SCOPED_EXISTING_ALLOWED`; `impeccable detect --json src` returned no findings. `impeccable-detect.json` now holds this output.
 
 The scan is mechanical evidence only. It does not certify visual quality, responsive behavior, keyboard access or acceptance; those need the separate browser receipts.
+
+## Third pass — 5 October 2026
+
+The release review changed `src/main.tsx`, `src/Pavilion.tsx` and `src/style.css`. One more manual scan of the released source returned no findings; `impeccable-detect.json` now holds this output.

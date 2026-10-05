@@ -1,7 +1,7 @@
 {
   "slug": "20-solaris",
   "base": "http://127.0.0.1:4630",
-  "date": "2026-10-03T14:51:03.827Z",
+  "date": "2026-10-05T11:02:05.679Z",
   "checks": [
     {
       "name": "1440 #/ no overflow",
@@ -307,7 +307,9 @@
       "width": 1440,
       "route": "#/",
       "title": "Designed around the light — SOLARIS",
-      "headings": ["Designed around the light."],
+      "headings": [
+        "Designed around the light."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -315,7 +317,9 @@
       "width": 1440,
       "route": "#/projects",
       "title": "Selected spaces — SOLARIS",
-      "headings": ["Openpossibilities."],
+      "headings": [
+        "Openpossibilities."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -323,7 +327,9 @@
       "width": 1440,
       "route": "#/studio",
       "title": "The studio — SOLARIS",
-      "headings": ["Look towardsthe light."],
+      "headings": [
+        "Look towardsthe light."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -331,7 +337,9 @@
       "width": 1440,
       "route": "#/contact",
       "title": "Start a conversation — SOLARIS",
-      "headings": ["Your nextchapter."],
+      "headings": [
+        "Your nextchapter."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -339,7 +347,9 @@
       "width": 1440,
       "route": "#/projects/sun-court",
       "title": "Sun Court — SOLARIS",
-      "headings": ["Sun Court"],
+      "headings": [
+        "Sun Court"
+      ],
       "broken": [],
       "overflow": false
     },
@@ -347,7 +357,9 @@
       "width": 1440,
       "route": "#/projects/light-house",
       "title": "Light House — SOLARIS",
-      "headings": ["Light House"],
+      "headings": [
+        "Light House"
+      ],
       "broken": [],
       "overflow": false
     },
@@ -355,7 +367,9 @@
       "width": 1440,
       "route": "#/projects/common-hours",
       "title": "Common Hours — SOLARIS",
-      "headings": ["Common Hours"],
+      "headings": [
+        "Common Hours"
+      ],
       "broken": [],
       "overflow": false
     },
@@ -363,7 +377,9 @@
       "width": 1440,
       "route": "#/projects/north-window",
       "title": "North Window — SOLARIS",
-      "headings": ["North Window"],
+      "headings": [
+        "North Window"
+      ],
       "broken": [],
       "overflow": false
     },
@@ -371,7 +387,9 @@
       "width": 390,
       "route": "#/",
       "title": "Designed around the light — SOLARIS",
-      "headings": ["Designed around the light."],
+      "headings": [
+        "Designed around the light."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -379,7 +397,9 @@
       "width": 390,
       "route": "#/projects",
       "title": "Selected spaces — SOLARIS",
-      "headings": ["Openpossibilities."],
+      "headings": [
+        "Openpossibilities."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -387,7 +407,9 @@
       "width": 390,
       "route": "#/studio",
       "title": "The studio — SOLARIS",
-      "headings": ["Look towardsthe light."],
+      "headings": [
+        "Look towardsthe light."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -395,7 +417,9 @@
       "width": 390,
       "route": "#/contact",
       "title": "Start a conversation — SOLARIS",
-      "headings": ["Your nextchapter."],
+      "headings": [
+        "Your nextchapter."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -403,7 +427,9 @@
       "width": 390,
       "route": "#/projects/sun-court",
       "title": "Sun Court — SOLARIS",
-      "headings": ["Sun Court"],
+      "headings": [
+        "Sun Court"
+      ],
       "broken": [],
       "overflow": false
     },
@@ -411,7 +437,9 @@
       "width": 390,
       "route": "#/projects/light-house",
       "title": "Light House — SOLARIS",
-      "headings": ["Light House"],
+      "headings": [
+        "Light House"
+      ],
       "broken": [],
       "overflow": false
     },
@@ -419,7 +447,9 @@
       "width": 390,
       "route": "#/projects/common-hours",
       "title": "Common Hours — SOLARIS",
-      "headings": ["Common Hours"],
+      "headings": [
+        "Common Hours"
+      ],
       "broken": [],
       "overflow": false
     },
@@ -427,7 +457,9 @@
       "width": 390,
       "route": "#/projects/north-window",
       "title": "North Window — SOLARIS",
-      "headings": ["North Window"],
+      "headings": [
+        "North Window"
+      ],
       "broken": [],
       "overflow": false
     }
@@ -472,24 +504,52 @@
       "disposed": false,
       "drawCalls": 55,
       "triangles": 42430,
-      "geometries": 42,
-      "textures": 7,
+      "geometries": 30,
+      "textures": 6,
       "dpr": 1,
-      "shadowMap": 2048
+      "shadowMap": 2048,
+      "journeyProgress": 1,
+      "journeyOwner": "manual",
+      "chapter": 0,
+      "cameraPosition": [
+        0.013497777685943313,
+        12.910914612285856,
+        8.011103552989715
+      ],
+      "lookTarget": [
+        0,
+        1,
+        0
+      ],
+      "journeyTriggerCount": 1
     },
     {
       "ready": true,
-      "renders": 123,
+      "renders": 124,
       "paused": true,
       "sun": 100,
       "view": 2,
       "disposed": false,
       "drawCalls": 55,
       "triangles": 42430,
-      "geometries": 42,
-      "textures": 7,
+      "geometries": 30,
+      "textures": 6,
       "dpr": 1,
-      "shadowMap": 2048
+      "shadowMap": 2048,
+      "journeyProgress": 1,
+      "journeyOwner": "manual",
+      "chapter": 0,
+      "cameraPosition": [
+        0.02598653603253525,
+        12.923776315137086,
+        8.009500477526824
+      ],
+      "lookTarget": [
+        0,
+        1,
+        0
+      ],
+      "journeyTriggerCount": 1
     }
   ],
   "browser": "154.0.8037.97",

@@ -1,0 +1,312 @@
+{
+  "slug": "20-solaris",
+  "base": "http://127.0.0.1:4630",
+  "date": "2026-10-05T11:02:56.347Z",
+  "checks": [
+    {
+      "name": "initial canvas absent",
+      "pass": true
+    },
+    {
+      "name": "initial Three scene chunk absent",
+      "pass": true,
+      "detail": [
+        "http://127.0.0.1:4630/assets/index-CdGVik6j.js"
+      ]
+    },
+    {
+      "name": "scene canvas mounts near study",
+      "pass": true
+    },
+    {
+      "name": "scene chunk requested near study",
+      "pass": true,
+      "detail": [
+        "http://127.0.0.1:4630/assets/index-CdGVik6j.js",
+        "http://127.0.0.1:4630/assets/Pavilion-ByN9mgGg.js"
+      ]
+    },
+    {
+      "name": "320x844 space image loaded",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:4630/images/solaris-world-mobile.webp",
+        "width": 1000,
+        "height": 625
+      }
+    },
+    {
+      "name": "320x844 space responsive source",
+      "pass": true,
+      "detail": "http://127.0.0.1:4630/images/solaris-world-mobile.webp"
+    },
+    {
+      "name": "320x844 space pressed state",
+      "pass": true
+    },
+    {
+      "name": "320x844 detail image loaded",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:4630/images/solaris-light-study-mobile.webp",
+        "width": 1000,
+        "height": 625
+      }
+    },
+    {
+      "name": "320x844 detail responsive source",
+      "pass": true,
+      "detail": "http://127.0.0.1:4630/images/solaris-light-study-mobile.webp"
+    },
+    {
+      "name": "320x844 detail pressed state",
+      "pass": true
+    },
+    {
+      "name": "320x844 no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320
+      }
+    },
+    {
+      "name": "320x844 no emoji or Unicode icon substitutes",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390x844 space image loaded",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:4630/images/solaris-world-mobile.webp",
+        "width": 1000,
+        "height": 625
+      }
+    },
+    {
+      "name": "390x844 space responsive source",
+      "pass": true,
+      "detail": "http://127.0.0.1:4630/images/solaris-world-mobile.webp"
+    },
+    {
+      "name": "390x844 space pressed state",
+      "pass": true
+    },
+    {
+      "name": "390x844 detail image loaded",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:4630/images/solaris-light-study-mobile.webp",
+        "width": 1000,
+        "height": 625
+      }
+    },
+    {
+      "name": "390x844 detail responsive source",
+      "pass": true,
+      "detail": "http://127.0.0.1:4630/images/solaris-light-study-mobile.webp"
+    },
+    {
+      "name": "390x844 detail pressed state",
+      "pass": true
+    },
+    {
+      "name": "390x844 no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390
+      }
+    },
+    {
+      "name": "390x844 no emoji or Unicode icon substitutes",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "768x1024 space image loaded",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:4630/images/solaris-world.webp",
+        "width": 3200,
+        "height": 2000
+      }
+    },
+    {
+      "name": "768x1024 space responsive source",
+      "pass": true,
+      "detail": "http://127.0.0.1:4630/images/solaris-world.webp"
+    },
+    {
+      "name": "768x1024 space pressed state",
+      "pass": true
+    },
+    {
+      "name": "768x1024 detail image loaded",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:4630/images/solaris-light-study.webp",
+        "width": 3200,
+        "height": 2000
+      }
+    },
+    {
+      "name": "768x1024 detail responsive source",
+      "pass": true,
+      "detail": "http://127.0.0.1:4630/images/solaris-light-study.webp"
+    },
+    {
+      "name": "768x1024 detail pressed state",
+      "pass": true
+    },
+    {
+      "name": "768x1024 no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "width": 768,
+        "scroll": 768,
+        "body": 768
+      }
+    },
+    {
+      "name": "768x1024 no emoji or Unicode icon substitutes",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440x900 space image loaded",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:4630/images/solaris-world.webp",
+        "width": 3200,
+        "height": 2000
+      }
+    },
+    {
+      "name": "1440x900 space responsive source",
+      "pass": true,
+      "detail": "http://127.0.0.1:4630/images/solaris-world.webp"
+    },
+    {
+      "name": "1440x900 space pressed state",
+      "pass": true
+    },
+    {
+      "name": "1440x900 detail image loaded",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:4630/images/solaris-light-study.webp",
+        "width": 3200,
+        "height": 2000
+      }
+    },
+    {
+      "name": "1440x900 detail responsive source",
+      "pass": true,
+      "detail": "http://127.0.0.1:4630/images/solaris-light-study.webp"
+    },
+    {
+      "name": "1440x900 detail pressed state",
+      "pass": true
+    },
+    {
+      "name": "1440x900 no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440
+      }
+    },
+    {
+      "name": "1440x900 no emoji or Unicode icon substitutes",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "844x390 space image loaded",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:4630/images/solaris-world.webp",
+        "width": 3200,
+        "height": 2000
+      }
+    },
+    {
+      "name": "844x390 space responsive source",
+      "pass": true,
+      "detail": "http://127.0.0.1:4630/images/solaris-world.webp"
+    },
+    {
+      "name": "844x390 space pressed state",
+      "pass": true
+    },
+    {
+      "name": "844x390 detail image loaded",
+      "pass": true,
+      "detail": {
+        "src": "http://127.0.0.1:4630/images/solaris-light-study.webp",
+        "width": 3200,
+        "height": 2000
+      }
+    },
+    {
+      "name": "844x390 detail responsive source",
+      "pass": true,
+      "detail": "http://127.0.0.1:4630/images/solaris-light-study.webp"
+    },
+    {
+      "name": "844x390 detail pressed state",
+      "pass": true
+    },
+    {
+      "name": "844x390 no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "width": 844,
+        "scroll": 844,
+        "body": 844
+      }
+    },
+    {
+      "name": "844x390 no emoji or Unicode icon substitutes",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "same-current route closes menu",
+      "pass": true
+    },
+    {
+      "name": "same-current route focuses main",
+      "pass": true
+    },
+    {
+      "name": "Escape closes open menu",
+      "pass": true
+    },
+    {
+      "name": "Escape restores menu trigger focus",
+      "pass": true
+    },
+    {
+      "name": "Escape with closed menu preserves gallery focus",
+      "pass": true
+    },
+    {
+      "name": "no browser or HTTP errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "resources": [
+    "http://127.0.0.1:4630/assets/index-CdGVik6j.js",
+    "http://127.0.0.1:4630/assets/Pavilion-ByN9mgGg.js"
+  ],
+  "browser": "154.0.8037.97",
+  "passed": true
+}
