@@ -512,7 +512,7 @@ export function Pavilion({ reduced }: { reduced: boolean }) {
       new T.Vector3(-0.2, 1.6, -0.58),
       new T.Vector3(-0.4, 1.8, -1.15),
       new T.Vector3(2.8, 1.3, 0.4),
-      new T.Vector3(0.2, 0.95, 4.2),
+      new T.Vector3(-0.5, 0.95, 4.2),
     ]);
     const desktopRoute = makeRoute(false);
     const portraitRoute = makeRoute(true);
