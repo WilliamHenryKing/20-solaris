@@ -1,0 +1,47 @@
+{
+  "scene": "solaris",
+  "geometrySource": "tools/worlds/cloth/solaris.json",
+  "vertices": 7171,
+  "faces": 7000,
+  "metadata": {
+    "method": "Blender Cloth gravity and self-collision; no analytic final fold surface",
+    "blender": "5.2.2 LTS",
+    "frame": 130,
+    "frames": 130,
+    "cacheBaked": true,
+    "seconds": 113.58454322814941,
+    "units": "metres",
+    "space": "world",
+    "restPose": {
+      "centre": [
+        -3.18,
+        0.7,
+        1.24
+      ],
+      "width": 1.18,
+      "length": 1.28,
+      "angle": -0.16,
+      "seed": 831
+    },
+    "physics": {
+      "quality": 10,
+      "collisionQuality": 8,
+      "mass": 0.22,
+      "tension": 18,
+      "compression": 18,
+      "shear": 8,
+      "bending": 0.12,
+      "distance": 0.004,
+      "selfDistance": 0.004,
+      "gravity": [
+        0.0,
+        0.0,
+        -9.8100004196167
+      ],
+      "unpinned": true,
+      "proxyFriction": 20
+    },
+    "blendFile": "C:\\Users\\William King\\Documents\\Money Making Project\\.workspace\\architecture-worlds\\cloth\\solaris.blend",
+    "snapshotObject": "SETTLED SNAPSHOT / unhide to inspect without cache"
+  }
+}

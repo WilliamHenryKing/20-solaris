@@ -1,0 +1,76 @@
+{
+  "scene": "solaris",
+  "view": "detail",
+  "quality": "final",
+  "compute": "CUDA",
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 2060",
+      "type": "CUDA",
+      "id": "CUDA_NVIDIA GeForce RTX 2060_0000:01:00"
+    }
+  ],
+  "cpuEnabled": false,
+  "denoiser": "OPTIX",
+  "blender": "5.2.2 LTS",
+  "resolution": [
+    3200,
+    2000
+  ],
+  "samples": 1024,
+  "adaptiveThreshold": 0.004999999888241291,
+  "minimumSamples": 96,
+  "bounces": 14,
+  "objects": 787,
+  "evaluatedTriangles": 2452090,
+  "geometry": "Original Python authored architectural world",
+  "materials": "Original procedural and Poly Haven CC0 photo PBR; see textures/manifest.json",
+  "texturesPacked": true,
+  "rendered": false,
+  "cloth": {
+    "sha256": "43f026a6fb63e8beacc6343714b30f889c70f193e6e2cc82b6c803b511520e93",
+    "bake": {
+      "method": "Blender Cloth gravity and self-collision; no analytic final fold surface",
+      "blender": "5.2.2 LTS",
+      "frame": 130,
+      "frames": 130,
+      "cacheBaked": true,
+      "seconds": 113.58454322814941,
+      "units": "metres",
+      "space": "world",
+      "restPose": {
+        "centre": [
+          -3.18,
+          0.7,
+          1.24
+        ],
+        "width": 1.18,
+        "length": 1.28,
+        "angle": -0.16,
+        "seed": 831
+      },
+      "physics": {
+        "quality": 10,
+        "collisionQuality": 8,
+        "mass": 0.22,
+        "tension": 18,
+        "compression": 18,
+        "shear": 8,
+        "bending": 0.12,
+        "distance": 0.004,
+        "selfDistance": 0.004,
+        "gravity": [
+          0.0,
+          0.0,
+          -9.8100004196167
+        ],
+        "unpinned": true,
+        "proxyFriction": 20
+      },
+      "blendFile": "C:\\Users\\William King\\Documents\\Money Making Project\\.workspace\\architecture-worlds\\cloth\\solaris.blend",
+      "snapshotObject": "SETTLED SNAPSHOT / unhide to inspect without cache"
+    }
+  },
+  "tileSize": 512,
+  "elapsedSeconds": 10.238
+}

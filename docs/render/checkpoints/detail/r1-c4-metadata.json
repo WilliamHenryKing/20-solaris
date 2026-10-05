@@ -1,0 +1,41 @@
+{
+  "scene": "solaris",
+  "view": "detail",
+  "quality": "final",
+  "rendered": true,
+  "sourceBlend": "C:\\Users\\William King\\Documents\\Money Making Project\\.workspace\\architecture-worlds\\solaris-detail-final.blend",
+  "sourceBlendSha256": "7ba29fc333df599f7a4245626c1ea53a81c45a4057b84517d3cd05f9e1bf4f1b",
+  "region": [
+    2336,
+    0,
+    3200,
+    1064
+  ],
+  "fullResolution": [
+    3200,
+    2000
+  ],
+  "resolution": [
+    864,
+    1064
+  ],
+  "compute": "CUDA",
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 2060",
+      "type": "CUDA",
+      "id": "CUDA_NVIDIA GeForce RTX 2060_0000:01:00"
+    }
+  ],
+  "cpuEnabled": false,
+  "denoiser": "OPTIX",
+  "samples": 1024,
+  "adaptiveThreshold": 0.004999999888241291,
+  "minimumSamples": 96,
+  "bounces": 14,
+  "blender": "5.2.2 LTS",
+  "tileSize": 512,
+  "bytes": 4122915,
+  "sha256": "8de91331278f823286a8898077c8f3d1db08b8b6effbd53d97ee2f526d05e3fd",
+  "elapsedSeconds": 204.017
+}

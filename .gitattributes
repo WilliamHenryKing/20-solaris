@@ -3,3 +3,12 @@
 *.jpg binary
 *.png binary
 *.woff2 binary
+# Hashed render evidence and packaged sources keep their exact recorded bytes.
+docs/render/** -text
+assets/source/** -text
+tools/worlds/** -text
+tools/render-world.py -text
+tools/bake-cloth.py -text
+tools/fetch-render-textures.py -text
+tools/render-architecture-cuda.py -text
+*.blend binary

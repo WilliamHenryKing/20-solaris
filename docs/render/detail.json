@@ -1,0 +1,416 @@
+{
+  "scene": "solaris",
+  "view": "detail",
+  "quality": "final",
+  "compute": "CUDA",
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 2060",
+      "type": "CUDA",
+      "id": "CUDA_NVIDIA GeForce RTX 2060_0000:01:00"
+    }
+  ],
+  "cpuEnabled": false,
+  "denoiser": "OPTIX",
+  "blender": "5.2.2 LTS",
+  "resolution": [
+    3200,
+    2000
+  ],
+  "samples": 1024,
+  "adaptiveThreshold": 0.004999999888241291,
+  "minimumSamples": 96,
+  "bounces": 14,
+  "objects": 787,
+  "evaluatedTriangles": 2452090,
+  "geometry": "Original Python authored architectural world",
+  "materials": "Original procedural and Poly Haven CC0 photo PBR; see textures/manifest.json",
+  "texturesPacked": true,
+  "rendered": true,
+  "cloth": {
+    "sha256": "43f026a6fb63e8beacc6343714b30f889c70f193e6e2cc82b6c803b511520e93",
+    "bake": {
+      "method": "Blender Cloth gravity and self-collision; no analytic final fold surface",
+      "blender": "5.2.2 LTS",
+      "frame": 130,
+      "frames": 130,
+      "cacheBaked": true,
+      "seconds": 113.58454322814941,
+      "units": "metres",
+      "space": "world",
+      "restPose": {
+        "centre": [
+          -3.18,
+          0.7,
+          1.24
+        ],
+        "width": 1.18,
+        "length": 1.28,
+        "angle": -0.16,
+        "seed": 831
+      },
+      "physics": {
+        "quality": 10,
+        "collisionQuality": 8,
+        "mass": 0.22,
+        "tension": 18,
+        "compression": 18,
+        "shear": 8,
+        "bending": 0.12,
+        "distance": 0.004,
+        "selfDistance": 0.004,
+        "gravity": [
+          0.0,
+          0.0,
+          -9.8100004196167
+        ],
+        "unpinned": true,
+        "proxyFriction": 20
+      },
+      "blendFile": "C:\\Users\\William King\\Documents\\Money Making Project\\.workspace\\architecture-worlds\\cloth\\solaris.blend",
+      "snapshotObject": "SETTLED SNAPSHOT / unhide to inspect without cache"
+    }
+  },
+  "tileSize": 512,
+  "elapsedSeconds": 1785.14,
+  "bytes": 27006355,
+  "sha256": "d370f819229a1724e78799342c3fc3e927bae3630fce02907584ae37adca6a69",
+  "renderMethod": "checkpointed border regions with 64px overscan",
+  "sourceFingerprint": "6cf102a67315349089c95ca7e7259774f8d93f103d6f38b5df0397618a0bbd15",
+  "sourceBlendSha256": "7ba29fc333df599f7a4245626c1ea53a81c45a4057b84517d3cd05f9e1bf4f1b",
+  "regions": [
+    {
+      "id": "r1-c1",
+      "core": [
+        0,
+        0,
+        800,
+        1000
+      ],
+      "region": [
+        0,
+        0,
+        864,
+        1064
+      ],
+      "dimensions": [
+        864,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "7ba29fc333df599f7a4245626c1ea53a81c45a4057b84517d3cd05f9e1bf4f1b",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r1-c1.png",
+        "bytes": 3951040,
+        "sha256": "d8e278be7f2d4ef6ca84bf259125521bdeec9b8bdc7875073612087be7a880b5"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r1-c1.json",
+        "bytes": 988,
+        "sha256": "d55509d2b0fb4cf252e1722fe106de496c6296e3cc363b5bc88acd192324fd09"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r1-c1.machine.json",
+        "bytes": 40444,
+        "sha256": "aa5dc103dac0ff2f0bde47ce6d1b3cef63b178b5575045cebad92f1df8d642d4"
+      }
+    },
+    {
+      "id": "r1-c2",
+      "core": [
+        800,
+        0,
+        1600,
+        1000
+      ],
+      "region": [
+        736,
+        0,
+        1664,
+        1064
+      ],
+      "dimensions": [
+        928,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "7ba29fc333df599f7a4245626c1ea53a81c45a4057b84517d3cd05f9e1bf4f1b",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r1-c2.png",
+        "bytes": 4118987,
+        "sha256": "dadcc327233aaaccf9d77a0e5dcad38fa4d7d5945b8c47b0daf9074516b294c9"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r1-c2.json",
+        "bytes": 991,
+        "sha256": "ded82f9cc3c571079142bda42fe3eebf08f3d7ad599f1471010cf238f3305078"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r1-c2.machine.json",
+        "bytes": 58026,
+        "sha256": "f068c8b86d7cb4360c53b0ad699293f0fa100eb9d26f2d2bd7b71e412baf832c"
+      }
+    },
+    {
+      "id": "r1-c3",
+      "core": [
+        1600,
+        0,
+        2400,
+        1000
+      ],
+      "region": [
+        1536,
+        0,
+        2464,
+        1064
+      ],
+      "dimensions": [
+        928,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "7ba29fc333df599f7a4245626c1ea53a81c45a4057b84517d3cd05f9e1bf4f1b",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r1-c3.png",
+        "bytes": 4266655,
+        "sha256": "ad80c6a0f8ffb102ab65a66dd4d55e69d7cb13163529bc4d0a96ac3d780b892c"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r1-c3.json",
+        "bytes": 992,
+        "sha256": "90233b6138b37332a3a26006c554cf59eb320c221159a0e6a90ef9b06b0bb59d"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r1-c3.machine.json",
+        "bytes": 40726,
+        "sha256": "14f3c8af43b6aa61d73d4d0bdca07801709aecdeb6173a254d2cf9c7eceb82b8"
+      }
+    },
+    {
+      "id": "r1-c4",
+      "core": [
+        2400,
+        0,
+        3200,
+        1000
+      ],
+      "region": [
+        2336,
+        0,
+        3200,
+        1064
+      ],
+      "dimensions": [
+        864,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "7ba29fc333df599f7a4245626c1ea53a81c45a4057b84517d3cd05f9e1bf4f1b",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r1-c4.png",
+        "bytes": 4122915,
+        "sha256": "8de91331278f823286a8898077c8f3d1db08b8b6effbd53d97ee2f526d05e3fd"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r1-c4.json",
+        "bytes": 992,
+        "sha256": "4fb5885e7cd1a0fd820c3e61ed911025a10b775cdea5c827305d367aa715f8ab"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r1-c4.machine.json",
+        "bytes": 36594,
+        "sha256": "081a0cea2e0a6d02aca164731ccfe28de7e376ca16bd0b59de9e44d5e6179209"
+      }
+    },
+    {
+      "id": "r2-c1",
+      "core": [
+        0,
+        1000,
+        800,
+        2000
+      ],
+      "region": [
+        0,
+        936,
+        864,
+        2000
+      ],
+      "dimensions": [
+        864,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "7ba29fc333df599f7a4245626c1ea53a81c45a4057b84517d3cd05f9e1bf4f1b",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r2-c1.png",
+        "bytes": 3632481,
+        "sha256": "d20cae6face978efaffa5260c02f9455c93e95af3b091eddba6433ef38a29080"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r2-c1.json",
+        "bytes": 989,
+        "sha256": "1dafaf6f663a9cce61702921387e6a077171ede49227135d124485bca9a4b3b1"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r2-c1.machine.json",
+        "bytes": 36322,
+        "sha256": "a3f299f4ca4c164e8277ac3ef3923b9a8277c75738b83a48a5932ea60aad5ba4"
+      }
+    },
+    {
+      "id": "r2-c2",
+      "core": [
+        800,
+        1000,
+        1600,
+        2000
+      ],
+      "region": [
+        736,
+        936,
+        1664,
+        2000
+      ],
+      "dimensions": [
+        928,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "7ba29fc333df599f7a4245626c1ea53a81c45a4057b84517d3cd05f9e1bf4f1b",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r2-c2.png",
+        "bytes": 4177770,
+        "sha256": "f2b8c0af281ba56a5d1fb326d88656859b8129b516ab33242e4c374fade74374"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r2-c2.json",
+        "bytes": 993,
+        "sha256": "beafac01a81a9786a0d94eef72a8cff182774b072524b3d263035ead449a99f1"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r2-c2.machine.json",
+        "bytes": 38270,
+        "sha256": "29b0086418c100d9134fc49a4f7897c669d5ac12b3f0478d4107d95612397428"
+      }
+    },
+    {
+      "id": "r2-c3",
+      "core": [
+        1600,
+        1000,
+        2400,
+        2000
+      ],
+      "region": [
+        1536,
+        936,
+        2464,
+        2000
+      ],
+      "dimensions": [
+        928,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "7ba29fc333df599f7a4245626c1ea53a81c45a4057b84517d3cd05f9e1bf4f1b",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r2-c3.png",
+        "bytes": 4103880,
+        "sha256": "1f72d86746ddb8346f93c2ce8ff74ec928c49dcc5c61b0dbba2f3149be6b4bdd"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r2-c3.json",
+        "bytes": 994,
+        "sha256": "433d814067f757f2a53dc2843115dd17f632e4d6f8f012762bf8eda8e4b190d0"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r2-c3.machine.json",
+        "bytes": 33065,
+        "sha256": "c2a12e9d3a70077e8716d14bcd1af65304f6f89dc46e18cafd636c90cf64c42c"
+      }
+    },
+    {
+      "id": "r2-c4",
+      "core": [
+        2400,
+        1000,
+        3200,
+        2000
+      ],
+      "region": [
+        2336,
+        936,
+        3200,
+        2000
+      ],
+      "dimensions": [
+        864,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "7ba29fc333df599f7a4245626c1ea53a81c45a4057b84517d3cd05f9e1bf4f1b",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r2-c4.png",
+        "bytes": 3995425,
+        "sha256": "42299c794c1dd06e46a9aabd284652b5f858ec34303bde814416cb467506c04a"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r2-c4.json",
+        "bytes": 994,
+        "sha256": "ab9e5475233a096625465c188160e28e9755b7fa1fde1726313bd537e59a5716"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/regions/6cf102a673153490-7ba29fc333df599f/r2-c4.machine.json",
+        "bytes": 32517,
+        "sha256": "8637d52a2f5103a774456b6703f0b3d83e3c0dec8aa43239130184bf5970548d"
+      }
+    }
+  ],
+  "overscanPixels": 64,
+  "coreGrid": [
+    4,
+    2
+  ],
+  "construction": {
+    "blend": {
+      "path": ".workspace/architecture-worlds/solaris-detail-final.blend",
+      "bytes": 94947052,
+      "sha256": "7ba29fc333df599f7a4245626c1ea53a81c45a4057b84517d3cd05f9e1bf4f1b"
+    },
+    "metadata": {
+      "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/construction-history/6cf102a673153490-b623c88c/construction.json",
+      "bytes": 2036,
+      "sha256": "018aad802d56d1f942487b2d3221b67b8bcee94d0f6a0b0ab1ad191440fa5e04"
+    },
+    "machine": {
+      "path": ".workspace/architecture-worlds/checkpoints/solaris-detail/construction-history/6cf102a673153490-b623c88c/construction.machine.json",
+      "bytes": 2878,
+      "sha256": "2a28860e24f5c760eff49e19004bf45e3820ed2ca002c78aa4253a7ae1080f32"
+    }
+  },
+  "assembledAt": "2026-10-05T10:19:08.801845+00:00",
+  "colorMetadata": [
+    {
+      "type": "sRGB",
+      "sha256": "711c4ff49da83dd7f14b0800b6ad4f7df58e6d66545525e83e14ba3992da0d69"
+    },
+    {
+      "type": "gAMA",
+      "sha256": "38ad77a09221cff71e5ca575333e576de71e0007f4d370083d8005dce15017d5"
+    },
+    {
+      "type": "cHRM",
+      "sha256": "68765597c7f1e0610c20028a6e9a7080d200ae493389fb5147ad186697ea4db5"
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "scene": "solaris",
+  "purpose": "Source packaging, not browser/release acceptance",
+  "finalInputs": {
+    "wide": {
+      "png": {
+        "file": "solaris-wide-final.png",
+        "bytes": 29301130,
+        "sha256": "af193676b4a6af995a5dc7e23ad98386ddef87ab44adc59a304c4944c35a9a72"
+      },
+      "blend": {
+        "file": "solaris-wide-final.blend",
+        "bytes": 94947094,
+        "sha256": "31dd36039fae85cf5f49bb5e695d1046b09de0740abd8b9e4cb444629835e490"
+      },
+      "metadata": {
+        "file": "solaris-wide-final.json",
+        "bytes": 13074,
+        "sha256": "17d357b0549c307fe832c442a55101b11d2887f00c15e871a80e830e584a0615"
+      },
+      "machine": {
+        "file": "solaris-wide-final.machine.json",
+        "bytes": 176691,
+        "sha256": "15799926164063d06c6fd20958d6d32b37ff0f72837f4e8420d104e3eb7f4016"
+      }
+    },
+    "detail": {
+      "png": {
+        "file": "solaris-detail-final.png",
+        "bytes": 27006355,
+        "sha256": "d370f819229a1724e78799342c3fc3e927bae3630fce02907584ae37adca6a69"
+      },
+      "blend": {
+        "file": "solaris-detail-final.blend",
+        "bytes": 94947052,
+        "sha256": "7ba29fc333df599f7a4245626c1ea53a81c45a4057b84517d3cd05f9e1bf4f1b"
+      },
+      "metadata": {
+        "file": "solaris-detail-final.json",
+        "bytes": 13132,
+        "sha256": "cf8df7b1977833a8e990e85905729b8c3229bd489ae04ce6566fadf5c6a80c82"
+      },
+      "machine": {
+        "file": "solaris-detail-final.machine.json",
+        "bytes": 333019,
+        "sha256": "f1c751589fb9e3d733b87737de2a5b8fed30cd705c92dba609ae41b83e689728"
+      }
+    }
+  },
+  "clothInputs": {
+    "tools\\worlds\\cloth\\solaris.json": {
+      "bytes": 816571,
+      "sha256": "43f026a6fb63e8beacc6343714b30f889c70f193e6e2cc82b6c803b511520e93"
+    },
+    ".workspace\\architecture-worlds\\cloth\\solaris.blend": {
+      "bytes": 456364,
+      "sha256": "ca9a33575f9b7873d390440ecd68020b634fe69735ebba873dbb4f4a663d4d7d"
+    }
+  },
+  "packagedFiles": {
+    "assets/source/architecture-world.blend": {
+      "bytes": 94947094,
+      "sha256": "31dd36039fae85cf5f49bb5e695d1046b09de0740abd8b9e4cb444629835e490"
+    },
+    "assets/source/texture-manifest.json": {
+      "bytes": 10091,
+      "sha256": "11dc5c1bd8dd2055cc5ba130b028735f40d804c9457ced7d24d4ff2868fbb4c2"
+    },
+    "assets/source/cloth-study.blend": {
+      "bytes": 456364,
+      "sha256": "ca9a33575f9b7873d390440ecd68020b634fe69735ebba873dbb4f4a663d4d7d"
+    },
+    "tools/worlds/cloth/solaris.json": {
+      "bytes": 816571,
+      "sha256": "43f026a6fb63e8beacc6343714b30f889c70f193e6e2cc82b6c803b511520e93"
+    },
+    "tools/bake-cloth.py": {
+      "bytes": 9378,
+      "sha256": "e8341492f799d12a6381d6f2db13f7c99647b8a7f7cfc3dc90c8b9923818aecd"
+    },
+    "docs/render/cloth.json": {
+      "bytes": 1191,
+      "sha256": "de86405e58caf369e627e7eb866dae4f183778a2b7179848dac1199dc35820d4"
+    },
+    "tools/render-world.py": {
+      "bytes": 5132,
+      "sha256": "d0cb653f8a12bcb5984b35477d7e1f5e614905115f8aad3b2ae5cef3640676c2"
+    },
+    "tools/render-architecture-cuda.py": {
+      "bytes": 23264,
+      "sha256": "4d064dabfc5544990711e0288fb435f0d1ed7c50d4098b08eaf3e216e522e435"
+    },
+    "tools/fetch-render-textures.py": {
+      "bytes": 3910,
+      "sha256": "e895a051df8982af8e2f62c3fbc033c213d13b85fa88326798f98ce09b828bc4"
+    },
+    "tools/worlds/world_common.py": {
+      "bytes": 20870,
+      "sha256": "8fcc61c2f1febc05770adf2053608844b812a18ed3808754897e50d6054c6552"
+    },
+    "tools/worlds/solaris.py": {
+      "bytes": 32966,
+      "sha256": "b7456ee2f2e58a4a5bbbdf397d46b5cc609be6bf74a35eabd75516acf555f85b"
+    }
+  },
+  "webpDelivery": {
+    "public/images/solaris-world.webp": {
+      "presentAtPackaging": true,
+      "bytes": 458248,
+      "sha256": "ab369d0a8d34afd295b75594a0a35f79239de8da4b6bf8a9e2f84fe7d549424b"
+    },
+    "public/images/solaris-world-mobile.webp": {
+      "presentAtPackaging": true,
+      "bytes": 50098,
+      "sha256": "bcc280d144e912de6579e36a0c39ad9da25466a21d2149b6602773c5c32a1194"
+    },
+    "public/images/solaris-light-study.webp": {
+      "presentAtPackaging": true,
+      "bytes": 206068,
+      "sha256": "5bd33cf670ae54139785e8235d4c1ce2aed8b71f0fe6e851a4201dc3d6e0ce2a"
+    },
+    "public/images/solaris-light-study-mobile.webp": {
+      "presentAtPackaging": true,
+      "bytes": 34148,
+      "sha256": "50b79de8ca1e004b3af89118483a27d81a2adf80b7e5b243b9fdf02fa455ddc1"
+    }
+  },
+  "checkpointEvidence": {
+    "wide": {
+      "renderMethod": "checkpointed border regions with 64px overscan",
+      "records": {
+        "manifest.json": {
+          "bytes": 17293,
+          "sha256": "ea2458c40797d2ac8e2091a2b3be1a15f4be0dafc1e1473f7b602dc5d88cbd25"
+        },
+        "r1-c1-metadata.json": {
+          "bytes": 983,
+          "sha256": "a0596dd234bbf326e32c74dbd0775fec4ac12c1408812960e4c30b55e37dd47e"
+        },
+        "r1-c1-machine.json": {
+          "bytes": 20086,
+          "sha256": "b82dd7dcc68325b49194b809badc698a2633c725d891db816e966be8dad88445"
+        },
+        "r1-c2-metadata.json": {
+          "bytes": 985,
+          "sha256": "a37dd34e58b5f272e81841f35f054521258563497e5ea919e89e8850da2449ff"
+        },
+        "r1-c2-machine.json": {
+          "bytes": 15711,
+          "sha256": "6ff76d09295ec9dca9590edce206b1d7a107e75e9faa4e99f163348e4bc608ef"
+        },
+        "r1-c3-metadata.json": {
+          "bytes": 986,
+          "sha256": "3e3549c70e6612de916ba1288c5eea3d77fcbae0cce8c587447cee278ba93b43"
+        },
+        "r1-c3-machine.json": {
+          "bytes": 11894,
+          "sha256": "6cc11e57511e317f16066f0b04f8ea60dc63dd28330583f09b34118138874235"
+        },
+        "r1-c4-metadata.json": {
+          "bytes": 987,
+          "sha256": "1deaf7c4d4379f25f1bb876c465c058316faf532585bf351385b86a2796148d6"
+        },
+        "r1-c4-machine.json": {
+          "bytes": 27315,
+          "sha256": "147c9cd95be81c8be1f949a2be0bf4e18bf818f8a4ac958b5f269e8443e1bfe2"
+        },
+        "r2-c1-metadata.json": {
+          "bytes": 984,
+          "sha256": "6eee30d6716d594ceab9ddf0f7f962cb653586db43980adb47a84f5df26a0007"
+        },
+        "r2-c1-machine.json": {
+          "bytes": 30330,
+          "sha256": "6bba4563567339a308550e87d3e1a52c7deef6b04c292203eb76ab62e5716a95"
+        },
+        "r2-c2-metadata.json": {
+          "bytes": 988,
+          "sha256": "1694d0695f596a3eafb09d6d2da2607215dc23b1524925887e42d17af885f485"
+        },
+        "r2-c2-machine.json": {
+          "bytes": 18721,
+          "sha256": "409d6eea2b1543b26d8d8219188ce74a4819f0002c30f761391bffed6cf8eeed"
+        },
+        "r2-c3-metadata.json": {
+          "bytes": 989,
+          "sha256": "4469accf3cc659a5cc2ec74caca8ee5ee1532c91781e3c60feaca7208d220520"
+        },
+        "r2-c3-machine.json": {
+          "bytes": 26208,
+          "sha256": "87e6bf255f95b913008d4b8a6d8d7894eb2ece310cae95f48f8f12b036f9c262"
+        },
+        "r2-c4-metadata.json": {
+          "bytes": 988,
+          "sha256": "560efa70cfba545fa2a163379f8e450fb7f5f6949e194016031f80cc3b9f1fff"
+        },
+        "r2-c4-machine.json": {
+          "bytes": 16803,
+          "sha256": "32b4b300e12504392b66a3c228fffcc60b47519883a5b4e1bac23bfcc54e1f8b"
+        },
+        "construction-metadata.json": {
+          "bytes": 2032,
+          "sha256": "e251cd36e643014ad35625cec476af630620109ccb1cc2d9b46b7d08574e5353"
+        },
+        "construction-machine.json": {
+          "bytes": 2605,
+          "sha256": "ff6ea7da423c14c5f7c3ee4d58e3f059c821fc440330db50b5603bf107db1941"
+        }
+      },
+      "regionPngsIncluded": false
+    },
+    "detail": {
+      "renderMethod": "checkpointed border regions with 64px overscan",
+      "records": {
+        "manifest.json": {
+          "bytes": 17360,
+          "sha256": "dbb2b3f5932e71ebb8bcc0e2dcb030d97e175081db39be0a231718a704a4b5da"
+        },
+        "r1-c1-metadata.json": {
+          "bytes": 988,
+          "sha256": "d55509d2b0fb4cf252e1722fe106de496c6296e3cc363b5bc88acd192324fd09"
+        },
+        "r1-c1-machine.json": {
+          "bytes": 40444,
+          "sha256": "aa5dc103dac0ff2f0bde47ce6d1b3cef63b178b5575045cebad92f1df8d642d4"
+        },
+        "r1-c2-metadata.json": {
+          "bytes": 991,
+          "sha256": "ded82f9cc3c571079142bda42fe3eebf08f3d7ad599f1471010cf238f3305078"
+        },
+        "r1-c2-machine.json": {
+          "bytes": 58026,
+          "sha256": "f068c8b86d7cb4360c53b0ad699293f0fa100eb9d26f2d2bd7b71e412baf832c"
+        },
+        "r1-c3-metadata.json": {
+          "bytes": 992,
+          "sha256": "90233b6138b37332a3a26006c554cf59eb320c221159a0e6a90ef9b06b0bb59d"
+        },
+        "r1-c3-machine.json": {
+          "bytes": 40726,
+          "sha256": "14f3c8af43b6aa61d73d4d0bdca07801709aecdeb6173a254d2cf9c7eceb82b8"
+        },
+        "r1-c4-metadata.json": {
+          "bytes": 992,
+          "sha256": "4fb5885e7cd1a0fd820c3e61ed911025a10b775cdea5c827305d367aa715f8ab"
+        },
+        "r1-c4-machine.json": {
+          "bytes": 36594,
+          "sha256": "081a0cea2e0a6d02aca164731ccfe28de7e376ca16bd0b59de9e44d5e6179209"
+        },
+        "r2-c1-metadata.json": {
+          "bytes": 989,
+          "sha256": "1dafaf6f663a9cce61702921387e6a077171ede49227135d124485bca9a4b3b1"
+        },
+        "r2-c1-machine.json": {
+          "bytes": 36322,
+          "sha256": "a3f299f4ca4c164e8277ac3ef3923b9a8277c75738b83a48a5932ea60aad5ba4"
+        },
+        "r2-c2-metadata.json": {
+          "bytes": 993,
+          "sha256": "beafac01a81a9786a0d94eef72a8cff182774b072524b3d263035ead449a99f1"
+        },
+        "r2-c2-machine.json": {
+          "bytes": 38270,
+          "sha256": "29b0086418c100d9134fc49a4f7897c669d5ac12b3f0478d4107d95612397428"
+        },
+        "r2-c3-metadata.json": {
+          "bytes": 994,
+          "sha256": "433d814067f757f2a53dc2843115dd17f632e4d6f8f012762bf8eda8e4b190d0"
+        },
+        "r2-c3-machine.json": {
+          "bytes": 33065,
+          "sha256": "c2a12e9d3a70077e8716d14bcd1af65304f6f89dc46e18cafd636c90cf64c42c"
+        },
+        "r2-c4-metadata.json": {
+          "bytes": 994,
+          "sha256": "ab9e5475233a096625465c188160e28e9755b7fa1fde1726313bd537e59a5716"
+        },
+        "r2-c4-machine.json": {
+          "bytes": 32517,
+          "sha256": "8637d52a2f5103a774456b6703f0b3d83e3c0dec8aa43239130184bf5970548d"
+        },
+        "construction-metadata.json": {
+          "bytes": 2036,
+          "sha256": "018aad802d56d1f942487b2d3221b67b8bcee94d0f6a0b0ab1ad191440fa5e04"
+        },
+        "construction-machine.json": {
+          "bytes": 2878,
+          "sha256": "2a28860e24f5c760eff49e19004bf45e3820ed2ca002c78aa4253a7ae1080f32"
+        }
+      },
+      "regionPngsIncluded": false
+    }
+  }
+}

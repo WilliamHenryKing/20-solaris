@@ -6,3 +6,5 @@ output/
 .playwright-cli/
 *.log
 *.tsbuildinfo
+assets/source/textures/
+*.blend1

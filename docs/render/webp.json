@@ -1,0 +1,42 @@
+{
+  "scene": "solaris",
+  "codec": "WebP",
+  "records": [
+    {
+      "file": "public/images/solaris-world.webp",
+      "width": 3200,
+      "height": 2000,
+      "bytes": 458248,
+      "sha256": "ab369d0a8d34afd295b75594a0a35f79239de8da4b6bf8a9e2f84fe7d549424b",
+      "quality": 90,
+      "source": "solaris-wide-final.png"
+    },
+    {
+      "file": "public/images/solaris-world-mobile.webp",
+      "width": 1000,
+      "height": 625,
+      "bytes": 50098,
+      "sha256": "bcc280d144e912de6579e36a0c39ad9da25466a21d2149b6602773c5c32a1194",
+      "quality": 86,
+      "source": "solaris-wide-final.png"
+    },
+    {
+      "file": "public/images/solaris-light-study.webp",
+      "width": 3200,
+      "height": 2000,
+      "bytes": 206068,
+      "sha256": "5bd33cf670ae54139785e8235d4c1ce2aed8b71f0fe6e851a4201dc3d6e0ce2a",
+      "quality": 90,
+      "source": "solaris-detail-final.png"
+    },
+    {
+      "file": "public/images/solaris-light-study-mobile.webp",
+      "width": 1000,
+      "height": 625,
+      "bytes": 34148,
+      "sha256": "50b79de8ca1e004b3af89118483a27d81a2adf80b7e5b243b9fdf02fa455ddc1",
+      "quality": 86,
+      "source": "solaris-detail-final.png"
+    }
+  ]
+}

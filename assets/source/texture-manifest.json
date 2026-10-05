@@ -1,0 +1,250 @@
+{
+  "license": "CC0-1.0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "assets": [
+    {
+      "id": "fine_grained_wood",
+      "url": "https://polyhaven.com/a/fine_grained_wood",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "files": [
+        {
+          "kind": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/fine_grained_wood/fine_grained_wood_col_2k.jpg",
+          "file": "fine_grained_wood/fine_grained_wood_col_2k.jpg",
+          "bytes": 1327517,
+          "sha256": "d97b1ab2c5206ac43bc0c42f21878da14f4d02497fd21396399406c03f3755a9"
+        },
+        {
+          "kind": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/fine_grained_wood/fine_grained_wood_nor_gl_2k.jpg",
+          "file": "fine_grained_wood/fine_grained_wood_nor_gl_2k.jpg",
+          "bytes": 855682,
+          "sha256": "c76fcd29434978227db5a35b5b0238da1bee0fb5fa8cdfc6819a76c7ef723f3c"
+        },
+        {
+          "kind": "Rough",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/fine_grained_wood/fine_grained_wood_rough_2k.jpg",
+          "file": "fine_grained_wood/fine_grained_wood_rough_2k.jpg",
+          "bytes": 871792,
+          "sha256": "7e8f5fc146ae7accd3b9deb2a173c1cf253707ccdee5070ce16cefd4ee68f1b7"
+        }
+      ]
+    },
+    {
+      "id": "rosewood_veneer1",
+      "url": "https://polyhaven.com/a/rosewood_veneer1",
+      "authors": {
+        "Jenelle van Heerden": "All"
+      },
+      "files": [
+        {
+          "kind": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rosewood_veneer1/rosewood_veneer1_diff_2k.jpg",
+          "file": "rosewood_veneer1/rosewood_veneer1_diff_2k.jpg",
+          "bytes": 3294736,
+          "sha256": "4aae1766165d5058ae0311d94d53fb0d5c7cb55d3314916e801b9505cf34ed8e"
+        },
+        {
+          "kind": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rosewood_veneer1/rosewood_veneer1_nor_gl_2k.jpg",
+          "file": "rosewood_veneer1/rosewood_veneer1_nor_gl_2k.jpg",
+          "bytes": 1569067,
+          "sha256": "9ae97e960494ffc5cd948ad89225f694a4624a228418f107bd7145d020dd728d"
+        },
+        {
+          "kind": "Rough",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rosewood_veneer1/rosewood_veneer1_rough_2k.jpg",
+          "file": "rosewood_veneer1/rosewood_veneer1_rough_2k.jpg",
+          "bytes": 947107,
+          "sha256": "33e775b991b2f2b4abe0ce61fed193599f336f7dc887847ca58068f92592c7e4"
+        }
+      ]
+    },
+    {
+      "id": "marble_01",
+      "url": "https://polyhaven.com/a/marble_01",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "files": [
+        {
+          "kind": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_diff_2k.jpg",
+          "file": "marble_01/marble_01_diff_2k.jpg",
+          "bytes": 1269188,
+          "sha256": "d403786171716f86718bdd67eba923d4fb6125c0636bacef0e6a21dd5d623a48"
+        },
+        {
+          "kind": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_nor_gl_2k.jpg",
+          "file": "marble_01/marble_01_nor_gl_2k.jpg",
+          "bytes": 409581,
+          "sha256": "d5e17ccb2913adbf28fcb781fddf0aa711259ddea6c1c918442f9a3589aa4660"
+        },
+        {
+          "kind": "Rough",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_rough_2k.jpg",
+          "file": "marble_01/marble_01_rough_2k.jpg",
+          "bytes": 281388,
+          "sha256": "1b970e033856c93ee7390d947da5340e101b489fc8c1463354ea9e6655ce039a"
+        }
+      ]
+    },
+    {
+      "id": "plastered_wall",
+      "url": "https://polyhaven.com/a/plastered_wall",
+      "authors": {
+        "Amal Kumar": "All"
+      },
+      "files": [
+        {
+          "kind": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/plastered_wall/plastered_wall_diff_2k.jpg",
+          "file": "plastered_wall/plastered_wall_diff_2k.jpg",
+          "bytes": 2434531,
+          "sha256": "c9f3235d6b28b249dd3c7e6346483f1f6ae11e62b4a81d0397936ff756dfcb1f"
+        },
+        {
+          "kind": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/plastered_wall/plastered_wall_nor_gl_2k.jpg",
+          "file": "plastered_wall/plastered_wall_nor_gl_2k.jpg",
+          "bytes": 4505457,
+          "sha256": "de20f536b1ec428c6de32267b317bbf538ecfa5c42398743f1b702a0f8434071"
+        },
+        {
+          "kind": "Rough",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/plastered_wall/plastered_wall_rough_2k.jpg",
+          "file": "plastered_wall/plastered_wall_rough_2k.jpg",
+          "bytes": 1475662,
+          "sha256": "be5c23b7d473bf1dea6d3a39b3e0537d5cf9eb990b4148566d20a35dc0902e54"
+        }
+      ]
+    },
+    {
+      "id": "rough_linen",
+      "url": "https://polyhaven.com/a/rough_linen",
+      "authors": {
+        "colormass": "Photography",
+        "Rico Cilliers": "Processing"
+      },
+      "files": [
+        {
+          "kind": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_diff_2k.jpg",
+          "file": "rough_linen/rough_linen_diff_2k.jpg",
+          "bytes": 3607181,
+          "sha256": "e71016e08dfebea1dd4e8a2a675e3b617a889a782af782f1abb795906f4db1b4"
+        },
+        {
+          "kind": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_nor_gl_2k.jpg",
+          "file": "rough_linen/rough_linen_nor_gl_2k.jpg",
+          "bytes": 3849356,
+          "sha256": "c5733ad50cfe0f90c546f3d4076590c1c78a4fd1a83c967cc9c92dc8175b99e6"
+        },
+        {
+          "kind": "Rough",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_rough_2k.jpg",
+          "file": "rough_linen/rough_linen_rough_2k.jpg",
+          "bytes": 4655974,
+          "sha256": "48400d48fa203882bf5d984d5beb2f95edb1550309924601c018f2c4f3f80731"
+        }
+      ]
+    },
+    {
+      "id": "concrete_wall_004",
+      "url": "https://polyhaven.com/a/concrete_wall_004",
+      "authors": {
+        "Dario Barresi": "Processing",
+        "Charlotte Baglioni": "Photography"
+      },
+      "files": [
+        {
+          "kind": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_wall_004/concrete_wall_004_diff_2k.jpg",
+          "file": "concrete_wall_004/concrete_wall_004_diff_2k.jpg",
+          "bytes": 2014170,
+          "sha256": "f0d2060e3ef503a6458ed94c92d059d794be38b56b3a3965e113922a5947ee39"
+        },
+        {
+          "kind": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_wall_004/concrete_wall_004_nor_gl_2k.jpg",
+          "file": "concrete_wall_004/concrete_wall_004_nor_gl_2k.jpg",
+          "bytes": 4317287,
+          "sha256": "c8df927b4923dabd7ea243f0bd497713ceefd43b8820ee0c2da05b8951e4ca80"
+        },
+        {
+          "kind": "Rough",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/concrete_wall_004/concrete_wall_004_rough_2k.jpg",
+          "file": "concrete_wall_004/concrete_wall_004_rough_2k.jpg",
+          "bytes": 934210,
+          "sha256": "491ee32fb2a941f627dfd9dc3c5f46da2c3b941a3ba1ac698aa2ea0b0bdec3b6"
+        }
+      ]
+    },
+    {
+      "id": "brown_mud_leaves_01",
+      "url": "https://polyhaven.com/a/brown_mud_leaves_01",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "files": [
+        {
+          "kind": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brown_mud_leaves_01/brown_mud_leaves_01_diff_2k.jpg",
+          "file": "brown_mud_leaves_01/brown_mud_leaves_01_diff_2k.jpg",
+          "bytes": 4539452,
+          "sha256": "29c997d77f56e4ea16d3e998a306be0c17fddb28ab4822657c7cd8249040ffda"
+        },
+        {
+          "kind": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brown_mud_leaves_01/brown_mud_leaves_01_nor_gl_2k.jpg",
+          "file": "brown_mud_leaves_01/brown_mud_leaves_01_nor_gl_2k.jpg",
+          "bytes": 5688696,
+          "sha256": "b6ec386e00d9d2a1c3a1da6a98a67066b0dfaa88ddb779341df29700cf081bdf"
+        },
+        {
+          "kind": "Rough",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brown_mud_leaves_01/brown_mud_leaves_01_rough_2k.jpg",
+          "file": "brown_mud_leaves_01/brown_mud_leaves_01_rough_2k.jpg",
+          "bytes": 2421908,
+          "sha256": "9556215f5fef905c37cdf19c77aef7822f124890f8fb7dcce65d57c5eafc0ca5"
+        }
+      ]
+    },
+    {
+      "id": "kiara_1_dawn",
+      "url": "https://polyhaven.com/a/kiara_1_dawn",
+      "authors": {
+        "Greg Zaal": "All"
+      },
+      "files": [
+        {
+          "kind": "hdri",
+          "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kiara_1_dawn_2k.hdr",
+          "file": "kiara_1_dawn/kiara_1_dawn_2k.hdr",
+          "bytes": 6149550,
+          "sha256": "7261c613b35a9b760ed5c7846ec8182532b90d89f6a8385c42bb743883159a66"
+        }
+      ]
+    },
+    {
+      "id": "kloofendal_48d_partly_cloudy",
+      "url": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy",
+      "authors": {
+        "Greg Zaal": "All"
+      },
+      "files": [
+        {
+          "kind": "hdri",
+          "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_48d_partly_cloudy_2k.hdr",
+          "file": "kloofendal_48d_partly_cloudy/kloofendal_48d_partly_cloudy_2k.hdr",
+          "bytes": 6480797,
+          "sha256": "3fbd33f279f29bd64925c1dd3214fd46c627493d21f1100248b6b1098da4d06e"
+        }
+      ]
+    }
+  ]
+}
