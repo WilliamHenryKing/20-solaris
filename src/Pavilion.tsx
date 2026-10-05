@@ -503,8 +503,17 @@ export function Pavilion({ reduced }: { reduced: boolean }) {
         new T.Vector3(portrait ? 7 : 8.5, 5.3, portrait ? 13.5 : 11.5),
         new T.Vector3(3.2, 2.5, 5.4),
         new T.Vector3(0.4, 1.8, 2.2),
-        new T.Vector3(-1.8, 1.7, 0.6),
+        // The walk ends at the back of the courtyard, turned to face the open threshold.
+        new T.Vector3(0.6, 1.55, -2.2),
       ]);
+    // The gaze follows: the pavilion, up into the oculus, past the open side, out to the steps.
+    const lookRoute = new T.CatmullRomCurve3([
+      new T.Vector3(0, 1.1, 0),
+      new T.Vector3(-0.2, 1.6, -0.58),
+      new T.Vector3(-0.4, 1.8, -1.15),
+      new T.Vector3(2.8, 1.3, 0.4),
+      new T.Vector3(0.2, 0.95, 4.2),
+    ]);
     const desktopRoute = makeRoute(false);
     const portraitRoute = makeRoute(true);
     camera.position.copy(desired);
@@ -522,8 +531,9 @@ export function Pavilion({ reduced }: { reduced: boolean }) {
       journey(n, force = false) {
         if (!force && (ownerRef.current !== "scroll" || reduced)) return;
         const route = camera.aspect < 1 ? portraitRoute : desktopRoute;
-        route.getPoint(Math.max(0, Math.min(1, n)), desired);
-        target.set(-n * 0.8, 1.1 + Math.sin(n * Math.PI) * 0.7, -n * 2.3);
+        const along = Math.max(0, Math.min(1, n));
+        route.getPoint(along, desired);
+        lookRoute.getPoint(along, target);
         camera.position.copy(desired);
         dirty = true;
       },
